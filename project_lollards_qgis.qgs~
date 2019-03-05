@@ -16,10 +16,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-371440.47328996809665114</xmin>
-      <ymin>6522988.3288425849750638</ymin>
-      <xmax>286040.26920780388172716</xmax>
-      <ymax>7180469.07134002912789583</ymax>
+      <xmin>-260893.27958237109123729</xmin>
+      <ymin>7098195.19833499658852816</ymin>
+      <xmax>-259609.13750718013034202</xmax>
+      <ymax>7099479.34041018690913916</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -60,7 +60,7 @@
     </legendlayer>
   </legend>
   <projectlayers>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>-20037508.34278924390673637</xmin>
         <ymin>-20037508.34278925508260727</ymin>
@@ -86,7 +86,6 @@
         </spatialrefsys>
       </srs>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
         <property key="identify/format" value="Undefined"/>
       </customproperties>
       <provider>wms</provider>
@@ -97,11 +96,11 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" band="1" type="singlebandcolordata">
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
           <rasterTransparency/>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="198" colorizeOn="1" colorizeRed="213" colorizeBlue="255" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
@@ -151,10 +150,10 @@
         <edittype widgetv2type="TextEdit" name="books">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="revolt_1414">
+        <edittype widgetv2type="TextEdit" name="1414Revolt">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="revolt_1431">
+        <edittype widgetv2type="TextEdit" name="1431Revolt">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
@@ -391,25 +390,23 @@
         <alias field="year 2" index="3" name=""/>
         <alias field="notes" index="4" name=""/>
         <alias field="books" index="5" name=""/>
-        <alias field="revolt_1414" index="-1" name=""/>
-        <alias field="revolt_1431" index="-1" name=""/>
+        <alias field="1414Revolt" index="6" name=""/>
+        <alias field="1431Revolt" index="7" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
-          <column width="56" hidden="0" type="field" name="id"/>
+          <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="name"/>
-          <column width="56" hidden="0" type="field" name="year"/>
-          <column width="56" hidden="0" type="field" name="year 2"/>
-          <column width="56" hidden="0" type="field" name="notes"/>
-          <column width="56" hidden="0" type="field" name="books"/>
-          <column width="79" hidden="0" type="field" name="1414Revolt"/>
-          <column width="83" hidden="0" type="field" name="1431Revolt"/>
+          <column width="-1" hidden="0" type="field" name="year"/>
+          <column width="-1" hidden="0" type="field" name="year 2"/>
+          <column width="-1" hidden="0" type="field" name="notes"/>
+          <column width="-1" hidden="0" type="field" name="books"/>
+          <column width="-1" hidden="0" type="field" name="1414Revolt"/>
+          <column width="-1" hidden="0" type="field" name="1431Revolt"/>
           <column width="-1" hidden="1" type="actions"/>
-          <column width="-1" hidden="0" type="field" name="revolt_1414"/>
-          <column width="-1" hidden="0" type="field" name="revolt_1431"/>
         </columns>
       </attributetableconfig>
       <editform></editform>
@@ -435,14 +432,7 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
-      <widgets>
-        <widget name="revolt_1414">
-          <config/>
-        </widget>
-        <widget name="revolt_1431">
-          <config/>
-        </widget>
-      </widgets>
+      <widgets/>
       <conditionalstyles>
         <rowstyles/>
         <fieldstyles/>
@@ -454,10 +444,10 @@ def my_form_open(dialog, layer, feature):
         <default field="year 2" expression=""/>
         <default field="notes" expression=""/>
         <default field="books" expression=""/>
-        <default field="revolt_1414" expression=""/>
-        <default field="revolt_1431" expression=""/>
+        <default field="1414Revolt" expression=""/>
+        <default field="1431Revolt" expression=""/>
       </defaults>
-      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
+      <previewExpression></previewExpression>
     </maplayer>
   </projectlayers>
   <properties>
