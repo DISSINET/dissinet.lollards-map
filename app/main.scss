@@ -1,0 +1,102 @@
+@import "~bulma/bulma";
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+$legend-circle-size: 8px;
+
+.legend {
+  position: absolute;
+  z-index: 800;
+  top: 10;
+  right: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10;
+  border-radius: 4px;
+  .title {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+    .version {
+      font-size: 0.8em;
+    }
+  }
+  span.colored {
+    display: block;
+    margin-left: 2rem;
+    .circle {
+      width: $legend-circle-size * 2;
+      height: $legend-circle-size * 2;
+      border-radius: $legend-circle-size;
+      background: red;
+      border: 1.5px solid black;
+      display: inline-block;
+      margin-left: 0.3rem;
+      vertical-align: text-bottom;
+    }
+  }
+}
+span.colored .circle {
+  width: $legend-circle-size * 2;
+  height: $legend-circle-size * 2;
+  border-radius: $legend-circle-size;
+  background: red;
+  border: 1.5px solid black;
+  display: inline-block;
+  margin: 0rem 0.5rem;
+  vertical-align: text-bottom;
+}
+
+.modal {
+  z-index: 10000;
+  .modal-card-body {
+    background-color: lightgrey;
+    font-size: 100%;
+    .title {
+      font-size: 2em;
+      .version {
+        font-size: 0.7em;
+      }
+    }
+    .text {
+      font-size: 1em;
+      ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-left: 1rem;
+      }
+    }
+  }
+  span.colored {
+    font-weight: 800;
+  }
+}
+
+.marker-icon-wrapper {
+  border: 2px solid black;
+  border-radius: 20px !important;
+}
+
+.map-base-layer {
+  opacity: 0.6 !important;
+}
+
+.popup {
+  .heading {
+    font-weight: 800;
+    margin-bottom: 5;
+  }
+}
+
+.cluster-text {
+  font-size: 13px !important;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-family: system-ui;
+  text-anchor: middle;
+}
