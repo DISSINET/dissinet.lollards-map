@@ -115,6 +115,7 @@ var init = () => {
   const clusters = L.markerClusterGroup({
     showCoverageOnHover: false,
     spiderLegPolylineOptions: { opacity: 0 },
+    singleMarkerMode: true,
 
     iconCreateFunction: cluster => {
       const markers = cluster.getAllChildMarkers();
@@ -124,10 +125,8 @@ var init = () => {
       const m = 1.5;
       const svgSize = (radius + m) * 2;
 
-      const wrapperEl = document.getElementById("pie");
       const svgEl = document.createElement("svg");
       svgEl.setAttribute("id", "pie" + cluster._leaflet_id);
-      //wrapperEl.appendChild(svgEl);
 
       const svg = d3
         .select(svgEl)
@@ -166,20 +165,13 @@ var init = () => {
     );
   };
 
-  data.forEach(feature => {
-    const marker = L.circleMarker(feature.ll, {
-      radius: 7,
-      fillColor: "blue",
-      fillOpacity: 1,
-      stroke: true,
-      color: "black",
-      weight: 1.5
-    }).bindPopup(createPopup(feature));
-
-    clusters.addLayer(marker);
+  const markers = data.map(feature => {
+    return L.marker(feature.ll, {}).bindPopup(createPopup(feature));
   });
+  clusters.addLayers(markers);
 
   clusters.addTo(map);
+  clusters.refreshClusters();
 };
 
 var prepareData = () => {
