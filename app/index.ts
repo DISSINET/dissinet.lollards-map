@@ -1,5 +1,4 @@
-import * as monasteriesJSON from "./data/monasteries.json";
-import * as ordersJSON from "./data/orders.json";
+import * as lollardsJSON from "./data/lollards.json";
 
 import "./main.scss";
 import "./../node_modules/leaflet/dist/leaflet.css";
@@ -11,7 +10,7 @@ import L from "leaflet";
 import * as d3 from "d3";
 import "leaflet.markercluster";
 import "leaflet.markercluster.placementstrategies";
-var version = "1.0.0";
+var version = "0.0.1";
 
 if (document.body && document.getElementById("map")) {
   document.getElementById("map").outerHTML = "";
@@ -23,12 +22,7 @@ if (document.body && document.getElementById("map")) {
 var data = [];
 var map = false;
 
-var colors = {
-  monks: "#00B06E",
-  nuns: "#BF0090",
-  double: "#FFC500"
-};
-var colorScale = chroma.scale([colors.monks, colors.double, colors.nuns]);
+var colors = {};
 
 var closeModal = e => {
   e.preventDefault();
@@ -48,7 +42,7 @@ var modal =
   '<div class="modal-background"></div>' +
   '<div class="modal-card ">' +
   '<section class="modal-card-body">' +
-  '<p class="title">Cistercian monasteries in France <span class="version">(v ' +
+  '<p class="title">Lollards <span class="version">(v ' +
   version +
   ")</span></p><div class='text'>" +
   '<div class="is-pulled-right"style="margin-top: 10px"><button id="continue-button" class="button is-dark">continue</button></div>' +
@@ -57,7 +51,7 @@ var modal =
 
 var legend =
   '<div class="legend">' +
-  '<p class="title">Cistercian monasteries in France <span class="version"> (v ' +
+  '<p class="title">Lollards <span class="version"> (v ' +
   version +
   ")</span></p><div class='text'>" +
   "</div>" +
@@ -76,12 +70,13 @@ var init = () => {
   document.getElementById("continue-button").onclick = closeModal;
 
   data = prepareData();
+  console.log(data);
   // initialise map
   map = L.map("map", {
-    center: [47, 2],
+    center: [54, -2],
     zoom: 7,
     maxZoom: 12,
-    minZoom: 7,
+    minZoom: 0,
     maxBounds: [[38, -10], [55, 15]]
   });
 
@@ -129,19 +124,6 @@ var init = () => {
       const m = 1.5;
       const svgSize = (radius + m) * 2;
 
-      let genders = [
-        { name: "monks", number: 0 },
-        { name: "nuns", number: 0 },
-        { name: "double", number: 0 }
-      ];
-      markers.forEach(marker => {
-        const gender = genders.find(g => g.name === marker.options.gender);
-        if (gender) {
-          gender.number += 1;
-        }
-      });
-      const arcs = pie(genders);
-
       const wrapperEl = document.getElementById("pie");
       const svgEl = document.createElement("svg");
       svgEl.setAttribute("id", "pie" + cluster._leaflet_id);
@@ -158,20 +140,6 @@ var init = () => {
         );
 
       svg.append("circle").attr("r", radius + m);
-
-      const g = svg
-        .selectAll("arc")
-        .data(arcs)
-        .enter()
-        .append("g")
-        .style("fill", d => {
-          return colors[d.data.name];
-        })
-        .attr("class", "arc");
-
-      svg.append("circle").attr("r", 2 + (radius + m) / 2);
-
-      g.append("path").attr("d", arc(radius));
       svg
         .append("text")
         .text(markers.length)
@@ -198,26 +166,35 @@ var init = () => {
     );
   };
 
-  data
-    .filter(monastery => monastery.valid)
-    .forEach(monastery => {
-      const marker = L.circleMarker(monastery.ll, {
-        radius: 7,
-        fillColor: colors[monastery.gender],
-        fillOpacity: 1,
-        stroke: true,
-        color: "black",
-        weight: 1.5,
-        gender: monastery.gender
-      }).bindPopup(createPopup(monastery));
-      clusters.addLayer(marker);
-    });
+  data.forEach(feature => {
+    const marker = L.circleMarker(feature.ll, {
+      radius: 7,
+      fillColor: "blue",
+      fillOpacity: 1,
+      stroke: true,
+      color: "black",
+      weight: 1.5
+    }).bindPopup(createPopup(feature));
+
+    clusters.addLayer(marker);
+  });
 
   clusters.addTo(map);
 };
 
-var prepareData = (): Array<Object> => {
-  return [];
+var prepareData = () => {
+  return lollardsJSON.features
+    .filter(
+      feature =>
+        feature.geometry.coordinates[1] && feature.geometry.coordinates[0]
+    )
+    .map(feature => {
+      feature.properties.ll = [
+        feature.geometry.coordinates[1],
+        feature.geometry.coordinates[0]
+      ];
+      return feature.properties;
+    });
 };
 
 init();
