@@ -118,15 +118,15 @@ var init = () => {
     singleMarkerMode: true,
 
     iconCreateFunction: cluster => {
-      const markers = cluster.getAllChildMarkers();
-      const single = markers.length === 1;
+      const children = cluster.getAllChildMarkers();
+      const single = children.length === 1;
 
       const radius = 15;
-      const m = 1.5;
+      const m = 10;
       const svgSize = (radius + m) * 2;
 
       const svgEl = document.createElement("svg");
-      svgEl.setAttribute("id", "pie" + cluster._leaflet_id);
+      svgEl.setAttribute("id", cluster._leaflet_id);
 
       const svg = d3
         .select(svgEl)
@@ -138,11 +138,43 @@ var init = () => {
           "translate(" + svgSize / 2 + ", " + svgSize / 2 + ")"
         );
 
-      svg.append("circle").attr("r", radius + m);
+      // main circle
+      svg
+        .append("circle")
+        .attr("r", radius)
+        .style("stroke", " black")
+        .style("fill", "white")
+        .style("stroke-width", 2);
+
+      // smaller outer circle
+
+      const outerCircleStrokeW = 2.5;
+      const outerCircleMargin = 2.5;
+
+      if (children.find(m => m.options.revolt_1414)) {
+        svg
+          .append("circle")
+          .attr("r", radius + outerCircleMargin + outerCircleStrokeW / 2)
+          .style("stroke", "green")
+          .style("fill", "none")
+          .style("stroke-width", outerCircleStrokeW);
+      }
+
+      // bigger outer circle
+      if (children.find(m => m.options.revolt_1431)) {
+        svg
+          .append("circle")
+          .attr("r", radius + 2 * (outerCircleMargin + outerCircleStrokeW / 2))
+          .style("stroke", "red")
+          .style("fill", "none")
+          .style("stroke-width", outerCircleStrokeW);
+      }
+
+      // bigger outer circle
       svg
         .append("text")
-        .text(markers.length)
-        .style("fill", "white")
+        .text(children.length)
+        .style("fill", "black")
         .attr("class", "cluster-text")
         .attr("dy", 4);
 
@@ -166,12 +198,11 @@ var init = () => {
   };
 
   const markers = data.map(feature => {
-    return L.marker(feature.ll, {}).bindPopup(createPopup(feature));
+    return L.marker(feature.ll, feature).bindPopup(createPopup(feature));
   });
   clusters.addLayers(markers);
 
   clusters.addTo(map);
-  clusters.refreshClusters();
 };
 
 var prepareData = () => {
