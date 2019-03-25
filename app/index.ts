@@ -23,10 +23,14 @@ var map = false;
 var mapEl;
 var clusters;
 
-var closeModal = e => {
-  e.preventDefault();
+var toggles = {
+  revolt1414: true,
+  revolt1431: true,
+  book: true
+};
+
+var closeModal = () => {
   document.getElementById("welcome").outerHTML = "";
-  document.getElementById("pie").innerHTML = "";
   if (document.getElementById("legend")) {
     document.getElementById("legend").innerHTML = "";
   }
@@ -48,12 +52,31 @@ var modal =
   "</section>" +
   "</div>";
 
+var checkbox = (label, symbolClass, toggle) =>
+  "<div class='field is-horizontal checkbox-line'>" +
+  "<div class='control'>" +
+  "<label class='checkbox'>" +
+  "<input type='checkbox'>" +
+  label +
+  "</label>" +
+  '<div class="legend-symbol">' +
+  '<span class="symbol-additional ' +
+  symbolClass +
+  '" ></span>' +
+  '<span class="legend-single-marker"></span>' +
+  "</div>" +
+  "</div>" +
+  "</div>";
+
 var legend =
   '<div class="legend">' +
   '<p class="title">Lollards <span class="version"> (v ' +
   version +
   ")</span></p><div class='text'>" +
   "</div>" +
+  checkbox("revolt 1414", "legend-revolt-1414", toggles["revolt1414"]) +
+  checkbox("revolt 1431", "legend-revolt-1431", toggles["revolt1431"]) +
+  checkbox("book", "legend-revolt-book", toggles["book"]) +
   "</div>";
 
 var yearColors = [
@@ -118,6 +141,7 @@ var init = () => {
   document.body.appendChild(welcomeEl);
   welcomeEl.innerHTML = modal;
   document.getElementById("continue-button").onclick = closeModal;
+  closeModal();
 
   data = prepareData();
   console.log(data);
@@ -161,7 +185,7 @@ var init = () => {
       const children = cluster.getAllChildMarkers();
       const single = children.length === 1;
 
-      const radius = 15;
+      const radius = 12;
       const m = 10;
       const svgSize = (radius + m) * 2;
 

@@ -21,6 +21,55 @@ $legend-circle-size: 8px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10;
   border-radius: 4px;
+  .checkbox-line {
+    line-height: 3em;
+  }
+  .legend-symbol {
+    display: inline;
+    margin-left: 1em;
+    position: absolute;
+  }
+  .symbol-additional {
+    position: absolute;
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+  .legend-revolt-1414 {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin-top: -4px;
+    margin-left: -4px;
+    background: none;
+    border: 1.5px solid #000;
+  }
+  .legend-revolt-1431 {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin-top: -6px;
+    margin-left: -6px;
+    background: none;
+    border: 1.5px solid #000;
+  }
+  .legend-revolt-book {
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    margin-left: 8px;
+    background: none;
+    border: 1.5px solid #000;
+    background: black;
+  }
+  .legend-single-marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: white;
+    border: 1.5px solid #000;
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
   .title {
     font-size: 1.2em;
     margin-bottom: 0.5rem;
@@ -28,30 +77,6 @@ $legend-circle-size: 8px;
       font-size: 0.8em;
     }
   }
-  span.colored {
-    display: block;
-    margin-left: 2rem;
-    .circle {
-      width: $legend-circle-size * 2;
-      height: $legend-circle-size * 2;
-      border-radius: $legend-circle-size;
-      background: red;
-      border: 1.5px solid black;
-      display: inline-block;
-      margin-left: 0.3rem;
-      vertical-align: text-bottom;
-    }
-  }
-}
-span.colored .circle {
-  width: $legend-circle-size * 2;
-  height: $legend-circle-size * 2;
-  border-radius: $legend-circle-size;
-  background: red;
-  border: 1.5px solid black;
-  display: inline-block;
-  margin: 0rem 0.5rem;
-  vertical-align: text-bottom;
 }
 
 .modal {
@@ -73,9 +98,6 @@ span.colored .circle {
         margin-left: 1rem;
       }
     }
-  }
-  span.colored {
-    font-weight: 800;
   }
 }
 
