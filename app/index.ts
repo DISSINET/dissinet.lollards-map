@@ -147,9 +147,17 @@ var init = () => {
         .style("stroke-width", 2);
 
       // smaller outer circle
-
       const outerCircleStrokeW = 2.5;
       const outerCircleMargin = 2.5;
+
+      const oldestYear = children
+        .map(m => m.options.year_oldest)
+        .filter(y => y)
+        .sort((m1, m2) => {
+          return m1 < m2 ? -1 : 1;
+        })[0];
+
+      console.log(oldestYear);
 
       if (children.find(m => m.options.revolt_1414)) {
         svg
