@@ -5,12 +5,11 @@ import "./../node_modules/leaflet/dist/leaflet.css";
 import "./../node_modules/leaflet.markercluster/dist/MarkerCluster.css";
 import "./../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css";
 
-import chroma from "chroma-js";
 import L from "leaflet";
 import * as d3 from "d3";
 import "leaflet.markercluster";
 import "leaflet.markercluster.placementstrategies";
-var version = "0.0.1";
+var version = "0.1.0";
 
 if (document.body && document.getElementById("map")) {
   document.getElementById("map").outerHTML = "";
@@ -21,8 +20,8 @@ if (document.body && document.getElementById("map")) {
 
 var data = [];
 var map = false;
-
-var colors = {};
+var mapEl;
+var clusters;
 
 var closeModal = e => {
   e.preventDefault();
@@ -57,9 +56,60 @@ var legend =
   "</div>" +
   "</div>";
 
+var yearColors = [
+  "#fef0d9",
+  "#fdd49e",
+  "#fdbb84",
+  "#fc8d59",
+  "#ef6548",
+  "#d7301f"
+];
+
+const noYearColor = "grey";
+const maxYear = 1521;
+const minYear = 1415;
+const getYearColor = year => {
+  if (year) {
+    const d = maxYear - minYear;
+    const dr = (year - minYear) / d;
+    const i = Math.round(dr * yearColors.length);
+
+    return i === yearColors.length
+      ? yearColors[yearColors.length - 1]
+      : yearColors[i];
+  } else {
+    return noYearColor;
+  }
+};
+
+var createPopup = feature => {
+  return (
+    '<div class="popup">' +
+    // name
+    '<div class="heading">' +
+    "</div>" +
+    "</div>"
+  );
+};
+
+var prepareData = () => {
+  return lollardsJSON.features
+    .filter(
+      feature =>
+        feature.geometry.coordinates[1] && feature.geometry.coordinates[0]
+    )
+    .map(feature => {
+      feature.properties.ll = [
+        feature.geometry.coordinates[1],
+        feature.geometry.coordinates[0]
+      ];
+      return feature.properties;
+    });
+};
+
 var init = () => {
   // crate map div
-  const mapEl = document.createElement("div");
+  mapEl = document.createElement("div");
   mapEl.setAttribute("id", "map");
   document.body.appendChild(mapEl);
 
@@ -102,38 +152,7 @@ var init = () => {
     }
   ).addTo(map);
 
-  const pie = d3.pie().value(function(d) {
-    return d.number;
-  });
-
-  const yearColors = [
-    "#fef0d9",
-    "#fdd49e",
-    "#fdbb84",
-    "#fc8d59",
-    "#ef6548",
-    "#d7301f"
-  ];
-
-  const noYearColor = "grey";
-
-  const maxYear = 1521;
-  const minYear = 1415;
-  const getYearColor = year => {
-    if (year) {
-      const d = maxYear - minYear;
-      const dr = (year - minYear) / d;
-      const i = Math.round(dr * yearColors.length);
-
-      return i === yearColors.length
-        ? yearColors[yearColors.length - 1]
-        : yearColors[i];
-    } else {
-      return noYearColor;
-    }
-  };
-
-  const clusters = L.markerClusterGroup({
+  clusters = L.markerClusterGroup({
     showCoverageOnHover: false,
     spiderLegPolylineOptions: { opacity: 0 },
     singleMarkerMode: true,
@@ -228,37 +247,17 @@ var init = () => {
     }
   });
 
-  const createPopup = (monastery: {}) => {
-    return (
-      '<div class="popup">' +
-      // name
-      '<div class="heading">' +
-      "</div>" +
-      "</div>"
-    );
-  };
+  render();
+};
 
+var render = () => {
+  clusters.clearLayers();
   const markers = data.map(feature => {
     return L.marker(feature.ll, feature).bindPopup(createPopup(feature));
   });
   clusters.addLayers(markers);
 
   clusters.addTo(map);
-};
-
-var prepareData = () => {
-  return lollardsJSON.features
-    .filter(
-      feature =>
-        feature.geometry.coordinates[1] && feature.geometry.coordinates[0]
-    )
-    .map(feature => {
-      feature.properties.ll = [
-        feature.geometry.coordinates[1],
-        feature.geometry.coordinates[0]
-      ];
-      return feature.properties;
-    });
 };
 
 init();
