@@ -6,6 +6,9 @@
   bottom: 0;
   left: 0;
   right: 0;
+  .leaflet-tile {
+    filter: grayscale(90%) sepia(50%) brightness(105%);
+  }
 }
 
 $legend-circle-size: 8px;

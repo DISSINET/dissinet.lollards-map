@@ -112,8 +112,7 @@ var init = () => {
     "#fdbb84",
     "#fc8d59",
     "#ef6548",
-    "#d7301f",
-    "#990000"
+    "#d7301f"
   ];
 
   const noYearColor = "grey";
@@ -125,7 +124,6 @@ var init = () => {
       const d = maxYear - minYear;
       const dr = (year - minYear) / d;
       const i = Math.round(dr * yearColors.length);
-      console.log(year, dr, i);
 
       return i === yearColors.length
         ? yearColors[yearColors.length - 1]
@@ -206,8 +204,8 @@ var init = () => {
       if (children.find(m => m.options.books)) {
         svg
           .append("rect")
-          .attr("x", 8)
-          .attr("y", 8)
+          .attr("x", 6)
+          .attr("y", 6)
           .attr("width", 20)
           .attr("height", 20)
           .style("fill-opacity", 1)
