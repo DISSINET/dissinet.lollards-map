@@ -106,11 +106,34 @@ var init = () => {
     return d.number;
   });
 
-  const arc = radius =>
-    d3
-      .arc()
-      .outerRadius(radius)
-      .innerRadius(0);
+  const yearColors = [
+    "#fef0d9",
+    "#fdd49e",
+    "#fdbb84",
+    "#fc8d59",
+    "#ef6548",
+    "#d7301f",
+    "#990000"
+  ];
+
+  const noYearColor = "grey";
+
+  const maxYear = 1521;
+  const minYear = 1415;
+  const getYearColor = year => {
+    if (year) {
+      const d = maxYear - minYear;
+      const dr = (year - minYear) / d;
+      const i = Math.round(dr * yearColors.length);
+      console.log(year, dr, i);
+
+      return i === yearColors.length
+        ? yearColors[yearColors.length - 1]
+        : yearColors[i];
+    } else {
+      return noYearColor;
+    }
+  };
 
   const clusters = L.markerClusterGroup({
     showCoverageOnHover: false,
@@ -138,18 +161,6 @@ var init = () => {
           "translate(" + svgSize / 2 + ", " + svgSize / 2 + ")"
         );
 
-      // main circle
-      svg
-        .append("circle")
-        .attr("r", radius)
-        .style("stroke", " black")
-        .style("fill", "white")
-        .style("stroke-width", 2);
-
-      // smaller outer circle
-      const outerCircleStrokeW = 2.5;
-      const outerCircleMargin = 2.5;
-
       const oldestYear = children
         .map(m => m.options.year_oldest)
         .filter(y => y)
@@ -157,13 +168,27 @@ var init = () => {
           return m1 < m2 ? -1 : 1;
         })[0];
 
-      console.log(oldestYear);
+      const fillColor = getYearColor(oldestYear);
+
+      // main circle
+      svg
+        .append("circle")
+        .attr("r", radius)
+        .style("stroke", " black")
+        .style("fill", fillColor)
+        .style("fill-opacity", 1)
+        .style("stroke-width", 2);
+
+      // smaller outer circle
+      const outerCircleStrokeW = 2.5;
+      const outerCircleMargin = 2.5;
 
       if (children.find(m => m.options.revolt_1414)) {
         svg
           .append("circle")
           .attr("r", radius + outerCircleMargin + outerCircleStrokeW / 2)
           .style("stroke", "green")
+          .style("fill-opacity", 1)
           .style("fill", "none")
           .style("stroke-width", outerCircleStrokeW);
       }
