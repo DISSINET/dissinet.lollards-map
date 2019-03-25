@@ -187,7 +187,7 @@ var init = () => {
         svg
           .append("circle")
           .attr("r", radius + outerCircleMargin + outerCircleStrokeW / 2)
-          .style("stroke", "green")
+          .style("stroke", "black")
           .style("fill-opacity", 1)
           .style("fill", "none")
           .style("stroke-width", outerCircleStrokeW);
@@ -198,11 +198,21 @@ var init = () => {
         svg
           .append("circle")
           .attr("r", radius + 2 * (outerCircleMargin + outerCircleStrokeW / 2))
-          .style("stroke", "red")
+          .style("stroke", "black")
           .style("fill", "none")
           .style("stroke-width", outerCircleStrokeW);
       }
 
+      if (children.find(m => m.options.books)) {
+        svg
+          .append("rect")
+          .attr("x", 8)
+          .attr("y", 8)
+          .attr("width", 20)
+          .attr("height", 20)
+          .style("fill-opacity", 1)
+          .style("fill", "black");
+      }
       // bigger outer circle
       svg
         .append("text")
