@@ -23,21 +23,55 @@ var map = false;
 var mapEl;
 var clusters;
 
+let changingToggle = false;
+
+window["changeToggle"] = (toggleClass, e) => {
+  if (!changingToggle) {
+    changingToggle = true;
+    setTimeout(() => {
+      changingToggle = false;
+    }, 50);
+    console.log("toggling", toggleClass);
+    if (toggleClass === "book") {
+      console.log(toggles["book"]);
+      toggles["book"] = !toggles["book"];
+    } else {
+      if (toggleClass === "revolt1414") {
+        toggles["revolt1414"] = !toggles["revolt1414"];
+        toggles["revoltno"] = !(toggles["revolt1414"] || toggles["revolt1431"]);
+      } else if (toggleClass === "revolt1431") {
+        toggles["revolt1431"] = !toggles["revolt1431"];
+        toggles["revoltno"] = !(toggles["revolt1414"] || toggles["revolt1431"]);
+      } else if (toggleClass === "revoltno") {
+        toggles["revoltno"] = true;
+        toggles["revolt1431"] = false;
+        toggles["revolt1414"] = false;
+      }
+    }
+    render();
+  }
+};
+
 var toggles = {
-  revolt1414: true,
-  revolt1431: true,
-  book: true
+  revolt1414: false,
+  revolt1431: false,
+  revoltno: true,
+  book: false
 };
 
 var closeModal = () => {
   document.getElementById("welcome").outerHTML = "";
+  renderLegend();
+};
+
+var renderLegend = () => {
   if (document.getElementById("legend")) {
     document.getElementById("legend").innerHTML = "";
   }
 
   const legendEl = document.createElement("div");
   document.body.appendChild(legendEl);
-  legendEl.innerHTML = legend;
+  legendEl.innerHTML = legend();
 };
 
 var modal =
@@ -52,32 +86,45 @@ var modal =
   "</section>" +
   "</div>";
 
-var checkbox = (label, symbolClass, toggle) =>
-  "<div class='field is-horizontal checkbox-line'>" +
-  "<div class='control'>" +
-  "<label class='checkbox'>" +
-  "<input type='checkbox'>" +
-  label +
-  "</label>" +
-  '<div class="legend-symbol">' +
-  '<span class="symbol-additional ' +
-  symbolClass +
-  '" ></span>' +
-  '<span class="legend-single-marker"></span>' +
-  "</div>" +
-  "</div>" +
-  "</div>";
+var checkbox = (label, symbolClass, toggleClass) => {
+  return (
+    "<div class='field is-horizontal checkbox-line'>" +
+    "<div class='control'>" +
+    "<label class='checkbox' onClick=\"changeToggle('" +
+    toggleClass +
+    "'  )\">" +
+    "<input type='checkbox' " +
+    (toggles[toggleClass] ? "checked" : "") +
+    ">" +
+    label +
+    "</label>" +
+    '<div class="legend-symbol">' +
+    '<span class="symbol-additional ' +
+    symbolClass +
+    '" ></span>' +
+    '<span class="legend-single-marker"></span>' +
+    "</div>" +
+    "</div>" +
+    "</div>"
+  );
+};
 
-var legend =
-  '<div class="legend">' +
-  '<p class="title">Lollards <span class="version"> (v ' +
-  version +
-  ")</span></p><div class='text'>" +
-  "</div>" +
-  checkbox("revolt 1414", "legend-revolt-1414", toggles["revolt1414"]) +
-  checkbox("revolt 1431", "legend-revolt-1431", toggles["revolt1431"]) +
-  checkbox("book", "legend-revolt-book", toggles["book"]) +
-  "</div>";
+var legend = () => {
+  return (
+    '<div class="legend">' +
+    '<p class="title">Lollards <span class="version"> (v ' +
+    version +
+    ")</span></p><div class='text'>" +
+    "</div>" +
+    "<div><b>revolts</b></div>" +
+    checkbox("display revolt 1414", "legend-revolt-1414", "revolt1414") +
+    checkbox("display revolt 1431", "legend-revolt-1431", "revolt1431") +
+    checkbox("no revolt filter", "legend-revolt-no", "revoltno") +
+    "<div><b>books</b></div>" +
+    checkbox("display references with a book", "legend-revolt-book", "book") +
+    "</div>"
+  );
+};
 
 var yearColors = [
   "#fef0d9",
@@ -275,6 +322,7 @@ var init = () => {
 };
 
 var render = () => {
+  renderLegend();
   clusters.clearLayers();
   const markers = data.map(feature => {
     return L.marker(feature.ll, feature).bindPopup(createPopup(feature));
