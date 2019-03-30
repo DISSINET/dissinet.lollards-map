@@ -324,9 +324,24 @@ var init = () => {
 var render = () => {
   renderLegend();
   clusters.clearLayers();
-  const markers = data.map(feature => {
-    return L.marker(feature.ll, feature).bindPopup(createPopup(feature));
-  });
+  const markers = data
+    .filter(f => {
+      const bookOk = toggles["book"] ? f.books === 1 : true;
+
+      if (toggles["revolt1414"] && toggles["revolt1431"]) {
+        return f.revolt_1414 === 1 && f.revolt_1431 === 1 && bookOk;
+      }
+      if (toggles["revolt1431"]) {
+        return f.revolt_1431 === 1 && bookOk;
+      }
+      if (toggles["revolt1414"]) {
+        return f.revolt_1414 === 1 && bookOk;
+      }
+      return bookOk;
+    })
+    .map(feature => {
+      return L.marker(feature.ll, feature).bindPopup(createPopup(feature));
+    });
   clusters.addLayers(markers);
 
   clusters.addTo(map);
