@@ -71,11 +71,6 @@ export default class PanelComponent extends React.Component<Props> {
               event: this.toggleCheckbox
             });
           })}
-
-        <button className="primary">primary button</button>
-        <button className="secondary">secondary button</button>
-        <button className="danger">danger button</button>
-        <button className="success">success button</button>
       </div>
     );
   }

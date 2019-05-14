@@ -18,14 +18,14 @@ export default class AppStore {
     {
       category: "revolts",
       id: "revolts-1414",
-      label: "only 1414 revolt",
+      label: "1414 revolt",
       fn: p => p.properties.revolt1414 === "1",
       active: false
     },
     {
       category: "revolts",
       id: "revolts-1431",
-      label: "only 1431 revolt",
+      label: "1431 revolt",
       fn: p => p.properties.revolt1431 === "1",
       active: false
     },
@@ -33,7 +33,7 @@ export default class AppStore {
       category: "revolts",
       id: "revolts-or",
       label: "at least one revolt",
-      fn: p => p =>
+      fn: p =>
         p.properties.revolt1414 === "1" || p.properties.revolt1431 === "1",
       active: false
     },
@@ -41,7 +41,7 @@ export default class AppStore {
       category: "revolts",
       id: "revolts-both",
       label: "both revolts",
-      fn: p => p =>
+      fn: p =>
         p.properties.revolt1414 === "1" && p.properties.revolt1431 === "1",
       active: false
     },
@@ -49,29 +49,29 @@ export default class AppStore {
       category: "revolts",
       id: "revolts-no",
       label: "no revolt",
-      fn: p => p =>
+      fn: p =>
         p.properties.revolt1414 !== "1" && p.properties.revolt1431 !== "1",
-      active: false
-    },
-    {
-      category: "books",
-      id: "books-true",
-      label: "with books",
-      fn: p => p => p.properties.books !== "1",
-      active: true
-    },
-    {
-      category: "books",
-      id: "books-false",
-      label: "without books",
-      fn: p => p => p.properties.books !== "0",
       active: false
     },
     {
       category: "books",
       id: "books-all",
       label: "no filter",
-      fn: p => p => true,
+      fn: p => true,
+      active: true
+    },
+    {
+      category: "books",
+      id: "books-true",
+      label: "with books",
+      fn: p => p.properties.books === "1",
+      active: false
+    },
+    {
+      category: "books",
+      id: "books-false",
+      label: "without books",
+      fn: p => p.properties.books !== "1",
       active: false
     }
   ];
@@ -107,7 +107,11 @@ export default class AppStore {
 
   @computed
   get active(): Array<any> {
-    return this.data;
+    const activeFilters = this.filters.filter(f => f.active);
+
+    return this.data.filter(feat => {
+      return activeFilters.every(filter => filter.fn(feat));
+    });
   }
 
   @action
