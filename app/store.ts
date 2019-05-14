@@ -4,11 +4,13 @@ export default class AppStore {
   _center;
   _zoom;
   _extent;
+  data;
 
-  constructor() {
-    this._center = observable.box([48.93, 18.15]);
+  constructor(data) {
+    this._center = observable.box([52, -3]);
     this._zoom = observable.box(6);
     this._extent = observable.box([]);
+    this.data = data;
   }
 
   @computed
@@ -24,6 +26,11 @@ export default class AppStore {
   @computed
   get extent(): Array<number> {
     return toJS(this._extent);
+  }
+
+  @computed
+  get active(): Array<any> {
+    return this.data;
   }
 
   @action

@@ -74,7 +74,15 @@ export default class MapComponent extends React.Component<Props> {
             </LayersControl.BaseLayer>
           </LayersControl>
           <LayerGroup>
-            <Marker position={[48.93, 18.15]} icon={icon} />
+            {this.props.active.map((point, pi) => {
+              return (
+                <Marker
+                  key={pi}
+                  position={point.geometry.coordinates}
+                  icon={icon}
+                />
+              );
+            })}
           </LayerGroup>
         </Map>
       </div>

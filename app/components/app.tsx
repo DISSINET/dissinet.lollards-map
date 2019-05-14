@@ -20,6 +20,7 @@ export default class App extends React.Component<Props> {
           handleMapMoved={store.mapMoved.bind(store)}
           center={store.center}
           zoom={store.zoom}
+          active={store.active}
         />
         <PanelComponent />
       </div>
