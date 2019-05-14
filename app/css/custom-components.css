@@ -58,8 +58,12 @@ button.success {
     @apply py-4;
     @apply pin-y;
     @apply pin-r;
+
     .heading {
       @apply mb-4;
+    }
+    .subheading {
+      @apply -mt-4;
     }
   }
   .map {
