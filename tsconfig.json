@@ -1,11 +1,18 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "noImplicitAny": false,
     "experimentalDecorators": true,
-    "allowJs": true,
-    "target": "es5",
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./app/*"]
+    },
     "jsx": "react",
-    "resolveJsonModule": true,
-    "lib": ["es2016", "dom"]
-  }
+    "target": "es5"
+  },
+  "include": ["app/*.*", "app/**/*.*", "test/*.ts", "test/**/*.ts"],
+  "exclude": [".git", "node_modules"]
 }

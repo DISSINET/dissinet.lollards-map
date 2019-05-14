@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map component map component should load 1`] = `
+<div
+  className="map"
+  data-testid="map-wrapper"
+>
+  <Map
+    center={
+      Array [
+        10,
+        10,
+      ]
+    }
+    onViewportChanged={[Function]}
+    zoom={7}
+  >
+    <ForwardRef(Leaflet(LayersControl))
+      position="topright"
+    >
+      <BaseLayer
+        checked={true}
+        name="OpenStreetMap.BlackAndWhite"
+      >
+        <ForwardRef(Leaflet(TileLayer))
+          attribution="© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors"
+          url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
+        />
+      </BaseLayer>
+      <BaseLayer
+        name="OpenStreetMap.Mapnik"
+      >
+        <ForwardRef(Leaflet(TileLayer))
+          attribution="© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+      </BaseLayer>
+    </ForwardRef(Leaflet(LayersControl))>
+    <ForwardRef(Leaflet(LayerGroup))>
+      <ForwardRef(Leaflet(Marker))
+        icon={
+          NewClass {
+            "_initHooksCalled": true,
+            "options": Object {
+              "iconAnchor": Array [
+                12,
+                40,
+              ],
+              "iconSize": Array [
+                25,
+                40,
+              ],
+              "iconUrl": "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
+            },
+          }
+        }
+        position={
+          Array [
+            48.93,
+            18.15,
+          ]
+        }
+      />
+    </ForwardRef(Leaflet(LayerGroup))>
+  </Map>
+</div>
+`;
