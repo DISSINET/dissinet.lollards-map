@@ -22,7 +22,7 @@ export default class App extends React.Component<Props> {
           zoom={store.zoom}
           active={store.active}
         />
-        <PanelComponent />
+        <PanelComponent filters={store.filters} />
       </div>
     );
   }

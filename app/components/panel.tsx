@@ -15,7 +15,7 @@ export default class PanelComponent extends React.Component<Props> {
 
   renderCheckbox(data: { key; value; label; checked; event; style? }) {
     return (
-      <div className="md:flex md:items-center mb-6" key={data.key}>
+      <div className="md:flex md:items-center " key={data.key}>
         <label className="md:w-full block text-gray-500 font-bold">
           <input
             onChange={data.event.bind(this)}
@@ -34,23 +34,37 @@ export default class PanelComponent extends React.Component<Props> {
   }
 
   render() {
+    console.log(this.props.filters);
     return (
       <div className="panel" data-testid="panel-wrapper">
         <h1 className="heading text-muni">Lollards, 1414-1522</h1>
-        <h2 className="subheading text-black">
+        <h2 className="subheading text-black font-medium">
           Places of origin of Lollards, unauthorized book owners, and
           participants in revolts related to Lollardy
         </h2>
 
         <br />
         <b>revolts</b>
+        {this.props.filters.revolts.map(revoltFilter => {
+          return this.renderCheckbox({
+            key: revoltFilter.id,
+            value: revoltFilter.id,
+            label: revoltFilter.label,
+            checked: revoltFilter.active,
+            event: this.toggleCheckbox
+          });
+        })}
 
-        {this.renderCheckbox({
-          key: 1,
-          value: "1414",
-          label: "1414 revolt",
-          checked: true,
-          event: this.toggleCheckbox
+        <br />
+        <b>books</b>
+        {this.props.filters.revolts.map(bookFilter => {
+          return this.renderCheckbox({
+            key: bookFilter.id,
+            value: bookFilter.id,
+            label: bookFilter.label,
+            checked: bookFilter.active,
+            event: this.toggleCheckbox
+          });
         })}
 
         <button className="primary">primary button</button>
