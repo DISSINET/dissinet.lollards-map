@@ -22,7 +22,10 @@ export default class App extends React.Component<Props> {
           zoom={store.zoom}
           active={store.active}
         />
-        <PanelComponent filters={store.filters} />
+        <PanelComponent
+          filters={store.filters}
+          activateFilter={store.activateFilter.bind(store)}
+        />
       </div>
     );
   }
