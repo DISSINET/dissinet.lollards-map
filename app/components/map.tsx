@@ -191,33 +191,6 @@ export default class MapComponent extends React.Component<Props> {
       }
     }
 
-    /*
-      <ellipse
-      id="path8"
-      cx="12.260988"
-      cy="285.65778"
-      rx="10.34879"
-      ry="9.8977718"
-      style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-   <path
-      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79374999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-      d="m 26.058778,286.50967 -6.715147,2.10475 -5.34539,-1.16931 -0.133635,8.08491 5.846521,1.06907 6.381059,-1.9377 z"
-      id="path4548"
-      inkscape:connector-curvature="0" />
-   <path
-      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79374999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-      d="m 2.9990256,270.82817 c 1.0690017,1.51304 0.2844093,2.84512 -1.1792074,5.0188 -1.46721995,2.17903 -3.1687443,7.25758 2.3157712,7.1604 7.1179906,-0.12612 6.6972696,-7.23466 -1.1365638,-12.1792 z"
-      id="path3715-3-7"
-      inkscape:connector-curvature="0"
-      sodipodi:nodetypes="cssc" />
-   <path
-      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.79374999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-      d="m 19.870467,270.88631 c 1.069002,1.51304 0.28441,2.84512 -1.179207,5.0188 -1.46722,2.17903 -3.168745,7.25758 2.315771,7.1604 7.11799,-0.12612 6.697269,-7.23466 -1.136564,-12.1792 z"
-      id="path3715-3-7-5"
-      inkscape:connector-curvature="0"
-      sodipodi:nodetypes="cssc" />
-      */
-
     return L.divIcon({
       html: svgEl.outerHTML,
       className: "marker-icon " + (single ? "marker-single" : "marker-cluster"),
@@ -245,6 +218,7 @@ export default class MapComponent extends React.Component<Props> {
           center={this.props.center}
           zoom={this.props.zoom}
           maxZoom={16}
+          minZoom={7}
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
