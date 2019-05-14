@@ -1,5 +1,6 @@
-import * as React from "react";
-import * as L from "leaflet";
+import React from "react";
+import L from "leaflet";
+import * as d3 from "d3";
 
 import {
   Map,
@@ -9,16 +10,24 @@ import {
   LayerGroup
 } from "react-leaflet";
 
+import "leaflet.markercluster";
+import "leaflet.markercluster.placementstrategies";
+
 type Props = {
   center: Array<Number>;
   zoom: Number;
   handleMapMoved: Function;
 };
 
+const radius = 15;
+const m = 1.5;
+const svgSize = (radius + m) * 2;
+
 export default class MapComponent extends React.Component<Props> {
   mapRef;
   mapEl;
   props;
+  clusters;
 
   constructor(props) {
     super(props);
@@ -32,7 +41,80 @@ export default class MapComponent extends React.Component<Props> {
       setTimeout(() => {
         this.mapEl.invalidateSize();
       }, 0);
+
+      this.clusters = L.markerClusterGroup({
+        showCoverageOnHover: false,
+        maxClusterRadius: 70,
+        firstCircleElements: 6,
+        clockHelpingCircleOptions: {
+          weight: 0.7,
+          opacity: 1,
+          color: "black",
+          fillOpacity: 0,
+          dashArray: "10 5",
+          transform: "translateY(-10px)"
+        },
+        spiderfyDistanceSurplus: 35,
+        zoomToBoundsOnClick: true,
+        removeOutsideVisibleBounds: true,
+        elementsPlacementStrategy: "clock-concentric",
+        iconCreateFunction: this.clusterMarkerIcon.bind(this),
+        animate: false,
+        singleMarkerMode: true,
+        spiderLegPolylineOptions: { weight: 0 }
+      });
+      this.clusters.addTo(this.mapEl);
     }
+  }
+
+  componentDidUpdate() {
+    this.loadClusters();
+  }
+
+  loadClusters() {
+    this.clusters.clearLayers();
+    this.clusters.addLayers(this.points());
+  }
+
+  points() {
+    return this.props.active.map((feature, ri) => {
+      return L.marker(feature.geometry.coordinates, {
+        fillOpacity: 1,
+        weight: 0,
+        radius: 10,
+        data: feature
+      }).bindPopup("<p>" + "</p>");
+    });
+  }
+
+  clusterMarkerIcon(cluster) {
+    const markers = cluster.getAllChildMarkers();
+    const single = markers.length === 1;
+
+    const svgEl = document.createElement("svg");
+    svgEl.setAttribute("id", "pie" + cluster._leaflet_id);
+
+    const svg = d3
+      .select(svgEl)
+      .attr("width", svgSize)
+      .attr("height", svgSize)
+      .append("g")
+      .attr("transform", "translate(" + svgSize / 2 + ", " + svgSize / 2 + ")");
+
+    svg.append("circle").attr("r", radius + m);
+
+    svg
+      .append("text")
+      .text(markers.length)
+      .style("fill", "white")
+      .attr("class", "cluster-text")
+      .attr("dy", 4);
+
+    return L.divIcon({
+      html: svgEl.outerHTML,
+      className: "marker-icon " + (single ? "marker-single" : "marker-cluster"),
+      iconSize: L.point(radius * 2, radius * 2)
+    });
   }
 
   handleMapMove(e) {
@@ -47,12 +129,14 @@ export default class MapComponent extends React.Component<Props> {
       iconSize: [25, 40],
       iconAnchor: [12, 40]
     });
+    console.log(this.props);
 
     return (
       <div className="map" data-testid="map-wrapper">
         <Map
           center={this.props.center}
           zoom={this.props.zoom}
+          maxZoom={16}
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
@@ -73,17 +157,6 @@ export default class MapComponent extends React.Component<Props> {
               />
             </LayersControl.BaseLayer>
           </LayersControl>
-          <LayerGroup>
-            {this.props.active.map((point, pi) => {
-              return (
-                <Marker
-                  key={pi}
-                  position={point.geometry.coordinates}
-                  icon={icon}
-                />
-              );
-            })}
-          </LayerGroup>
         </Map>
       </div>
     );

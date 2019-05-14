@@ -36,7 +36,10 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "components": "^0.1.0",
+    "d3": "^5.9.2",
     "leaflet": "^1.5.1",
+    "leaflet.markercluster": "^1.4.1",
+    "leaflet.markercluster.placementstrategies": "^0.1.8",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
     "postcss-custom-properties": "^8.0.10",
@@ -47,6 +50,7 @@
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.4",
     "react-leaflet": "^2.2.1",
+    "react-leaflet-markercluster": "^1.1.8",
     "sass": "^1.19.0",
     "tailwindcss": "^0.7.4",
     "typescript": "^3.4.5"
