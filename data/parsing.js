@@ -34,7 +34,7 @@ readSpreadsheet("1SUUjjtBT7HBOS9V6USNPk4eR5SFSsSrDByRxrERgg7A", rows => {
   rows
     .filter(r => r.x && r.y)
     .map(row => {
-      const point = turf.point([row.x, row.y], row);
+      const point = turf.point([parseFloat(row.y), parseFloat(row.x)], row);
       points.push(point);
     });
 
