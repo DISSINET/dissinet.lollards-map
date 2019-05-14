@@ -25,6 +25,25 @@ button.success {
   @apply bg-success;
 }
 
+.cluster {
+  .cluster-symbols > * {
+    stroke: config("colors.white");
+    stroke-width: 0.8;
+    stroke-opacity: 1;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+  }
+  .cluster-texts > * {
+    font-weight: bold;
+    fill: config("colors.white");
+  }
+
+  circle.total {
+    fill: config("colors.muni");
+  }
+}
+
 .app-wrapper {
   @apply absolute;
   @apply pin-y;
