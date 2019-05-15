@@ -16,17 +16,26 @@ export default class PanelComponent extends React.Component<Props> {
 
   renderCheckbox(data: { key; value; label; checked; event; style? }) {
     return (
-      <div className="md:flex md:items-center " key={data.key}>
-        <label className="md:w-full block text-gray-500 font-bold">
-          <input
-            onChange={data.event.bind(this)}
-            checked={data.checked}
-            value={data.value}
+      <div key={data.key} className="md:items-center ">
+        <label className="block text-gray-500 font-bold">
+          {data.checked ? (
+            <i
+              id={data.key}
+              onClick={data.event.bind(this)}
+              className="fa fa-check-square-o mr-2 mt-2 text-muni"
+            />
+          ) : (
+            <i
+              id={data.key}
+              onClick={data.event.bind(this)}
+              className="fa fa-square-o mr-2 mt-2 text-black"
+            />
+          )}
+          <span
             id={data.key}
-            className="mr-2 mt-2 leading-tight"
-            type="checkbox"
-          />
-          <span className="text-sm align-text-top tb-2  font-normal">
+            onClick={data.event.bind(this)}
+            className="text-sm align-text-top tb-2  font-normal"
+          >
             {data.label}
           </span>
         </label>

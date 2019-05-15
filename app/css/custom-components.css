@@ -2,6 +2,15 @@
   --panel-w: 30em;
 }
 
+input[type="radio"]:after {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  left: -31px;
+  top: 2px;
+  color: transparent;
+  transition: color 0.2s;
+}
+
 button {
   @apply text-white;
   @apply font-bold;
