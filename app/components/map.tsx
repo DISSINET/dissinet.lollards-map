@@ -7,7 +7,8 @@ import {
   Marker,
   TileLayer,
   LayersControl,
-  LayerGroup
+  LayerGroup,
+  ScaleControl
 } from "react-leaflet";
 
 import "leaflet.markercluster";
@@ -137,27 +138,24 @@ export default class MapComponent extends React.Component<Props> {
       .attr("cy", "287")
       .attr("r", 8);
 
-    if (markers.length > 1) {
-      gText
-        .append("text")
-        .text(markers.length)
-        .attr("class", "total")
-        .attr("font-size", "17")
-        .attr("transform", "translate(-1 5)");
-    }
+    gText
+      .append("text")
+      .text(markers.length)
+      .attr("class", "total")
+      .attr("font-size", "17")
+      .attr("transform", "translate(-1 5)");
 
     if (revolt1No) {
       gSymbols
         .append("path")
         .attr("class", "revolt1")
         .attr("d", dFire1);
-      if (revolt1No > 1) {
-        gText
-          .append("text")
-          .text(revolt1No)
-          .attr("class", "revolt1")
-          .attr("transform", "translate(-10 -13)");
-      }
+
+      gText
+        .append("text")
+        .text(revolt1No)
+        .attr("class", "revolt1")
+        .attr("transform", "translate(-10 -13)");
     }
 
     if (revolt2No) {
@@ -166,13 +164,12 @@ export default class MapComponent extends React.Component<Props> {
         .attr("d", dFire2)
         .attr("class", "revolt2")
         .attr("transform", "translate(-7 0)");
-      if (revolt2No > 1) {
-        gText
-          .append("text")
-          .text(revolt2No)
-          .attr("class", "revolt2")
-          .attr("transform", "translate(10 -13)");
-      }
+
+      gText
+        .append("text")
+        .text(revolt2No)
+        .attr("class", "revolt2")
+        .attr("transform", "translate(10 -13)");
     }
 
     if (booksNo) {
@@ -181,14 +178,13 @@ export default class MapComponent extends React.Component<Props> {
         .attr("d", dBook)
         .attr("class", "book")
         .attr("transform", "translate(-10 5)");
-      if (booksNo > 1) {
-        gText
-          .append("text")
-          .text(booksNo)
-          .attr("class", "book")
-          .attr("class", "cluster-text")
-          .attr("transform", "translate(0 23)");
-      }
+
+      gText
+        .append("text")
+        .text(booksNo)
+        .attr("class", "book")
+        .attr("class", "cluster-text")
+        .attr("transform", "translate(0 23)");
     }
 
     return L.divIcon({
@@ -222,6 +218,7 @@ export default class MapComponent extends React.Component<Props> {
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
+          <ScaleControl />
           <LayersControl position="topright">
             <LayersControl.BaseLayer
               name="OpenStreetMap.BlackAndWhite"

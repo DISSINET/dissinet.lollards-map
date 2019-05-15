@@ -41,7 +41,7 @@ export default class PanelComponent extends React.Component<Props> {
         <h1 className="heading text-muni">Lollards, 1414-1522</h1>
         <h3 className="heading subheading text-black font-medium">
           Places of origin of Lollards, unauthorized book owners, and
-          participants in revolts related to Lollardy
+          participants in revolts related to Lollardy based on their trials
         </h3>
 
         <br />

@@ -1,5 +1,5 @@
 :root {
-  --panel-w: 20em;
+  --panel-w: 30em;
 }
 
 button {
@@ -75,9 +75,9 @@ button.success {
       @apply absolute;
       @apply z-20;
       @apply bg-white;
-      margin-left: 25%;
+      margin-left: 20%;
       margin-top: 10%;
-      max-width: 50%;
+      max-width: 60%;
       .paragraph {
         @apply text-left;
         @apply mb-4;
