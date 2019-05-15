@@ -33,7 +33,7 @@ export default class AppStore {
     {
       category: "revolts",
       id: "revolts-or",
-      label: "at least one revolt",
+      label: "1414 or 1431 revolt",
       fn: p =>
         p.properties.revolt1414 === "1" || p.properties.revolt1431 === "1",
       active: false
@@ -64,14 +64,14 @@ export default class AppStore {
     {
       category: "books",
       id: "books-true",
-      label: "with books",
+      label: "book mentioned",
       fn: p => p.properties.books === "1",
       active: false
     },
     {
       category: "books",
       id: "books-false",
-      label: "without books",
+      label: "no data on books",
       fn: p => p.properties.books !== "1",
       active: false
     }

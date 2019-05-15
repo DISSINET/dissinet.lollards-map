@@ -44,6 +44,7 @@ button.success {
 }
 
 .app-wrapper {
+  font-family: Arial, Helvetica Neue, sans-serif;
   @apply absolute;
   @apply pin-y;
   @apply pin-r;
@@ -69,6 +70,13 @@ button.success {
       margin-left: 25%;
       margin-top: 10%;
       max-width: 50%;
+      .paragraph {
+        @apply text-left;
+        @apply mb-4;
+      }
+      .paragraph.indent {
+        text-indent: 3rem;
+      }
     }
   }
   .panel {
