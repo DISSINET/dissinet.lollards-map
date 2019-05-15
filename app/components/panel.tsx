@@ -39,10 +39,10 @@ export default class PanelComponent extends React.Component<Props> {
     return (
       <div className="panel" data-testid="panel-wrapper">
         <h1 className="heading text-muni">Lollards, 1414-1522</h1>
-        <h2 className="subheading text-black font-medium">
+        <h3 className="heading subheading text-black font-medium">
           Places of origin of Lollards, unauthorized book owners, and
           participants in revolts related to Lollardy
-        </h2>
+        </h3>
 
         <br />
         <b>revolts</b>

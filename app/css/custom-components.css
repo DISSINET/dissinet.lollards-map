@@ -44,6 +44,14 @@ button.success {
 }
 
 .app-wrapper {
+  .heading {
+    @font-face {
+      font-family: "Muni";
+      src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
+        url("./../../assets/muni-bold-webfont.woff") format("woff");
+    }
+    font-family: "Muni", Arial, Helvetica Neue, sans-serif;
+  }
   font-family: Arial, Helvetica Neue, sans-serif;
   @apply absolute;
   @apply pin-y;
