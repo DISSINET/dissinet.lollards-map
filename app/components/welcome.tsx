@@ -70,15 +70,15 @@ export default class WelcomeComponent extends React.Component<Props> {
               acknowledge this financial support.
             </p>
             <p className="my-2">
-              <i className="mx-2 fa fa-book" />
+              <i className="mx-2 icon icon-book" />
               Data sources: Jedin et al., 1970; Thomson, 1970; Fines, 1964.
             </p>
             <p className="my-2">
-              <i className="mx-2 fa fa-database" />
+              <i className="mx-2 icon icon-layer-group" />
               Digitized and geocoded by Jan Král.
             </p>
             <p className="my-2">
-              <i className="mx-2 fa fa-map" />
+              <i className="mx-2 icon icon-drafting-compass" />
               Map by Adam Mertel.
             </p>
             <button

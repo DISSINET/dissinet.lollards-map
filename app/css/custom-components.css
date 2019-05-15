@@ -130,10 +130,8 @@ button.success {
   font-family: "Font Awesome Pro";
   font-style: normal;
   font-weight: 300;
-  src: url("./../../assets/light-300.woff2") format("woff2"),
+  src: url("./../../assets/fa-light-300.woff2") format("woff2"),
     url("./../../assets/fa-light-300.woff") format("woff");
-  src: url("/Css/_Shared/MuniWeb/fonts/light-300.woff2") format("woff2"),
-    url("/Css/_Shared/MuniWeb/fonts/fa-light-300.woff") format("woff");
 }
 @font-face {
   font-family: "Font Awesome Brands";
