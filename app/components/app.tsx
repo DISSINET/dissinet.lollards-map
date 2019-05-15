@@ -27,7 +27,9 @@ export default class App extends React.Component<Props> {
           filters={store.filters}
           activateFilter={store.activateFilter.bind(store)}
         />
-        {store.welcome && <WelcomeComponent />}
+        {store.welcome && (
+          <WelcomeComponent handleClose={store.closeWelcome.bind(store)} />
+        )}
       </div>
     );
   }

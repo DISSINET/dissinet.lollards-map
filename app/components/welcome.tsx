@@ -10,12 +10,17 @@ export default class WelcomeComponent extends React.Component<Props> {
     super(props);
   }
 
+  handleClose() {
+    console.log("closing");
+    this.props.handleClose();
+  }
+
   render() {
     return (
       <div className="welcome" data-testid="welcome-wrapper">
         <div className="content shadow-lg">
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 text-muni">
+            <div className="heading font-bold text-xl mb-2 text-muni">
               Lollards, 1414-1522
             </div>
             <p className="paragraph">
@@ -64,15 +69,27 @@ export default class WelcomeComponent extends React.Component<Props> {
               Analysis and Geographic Information Systems”). We gratefully
               acknowledge this financial support.
             </p>
-            <p className="">
+            <p className="my-2">
+              <i className="mx-2 fa fa-book" />
               Data sources: Jedin et al., 1970; Thomson, 1970; Fines, 1964.
             </p>
-            <p className="">Digitized and geocoded by Jan Král.</p>
-            <p className="">Map by Adam Mertel.</p>
-            <button className="primary float-right text-base">close</button>
+            <p className="my-2">
+              <i className="mx-2 fa fa-database" />
+              Digitized and geocoded by Jan Král.
+            </p>
+            <p className="my-2">
+              <i className="mx-2 fa fa-map" />
+              Map by Adam Mertel.
+            </p>
+            <button
+              className="primary float-right text-base"
+              onClick={this.handleClose.bind(this)}
+            >
+              close
+            </button>
           </div>
         </div>
-        <div className="background" />
+        <div className="background" onClick={this.handleClose.bind(this)} />
       </div>
     );
   }
