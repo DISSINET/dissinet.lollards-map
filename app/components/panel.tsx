@@ -22,13 +22,13 @@ export default class PanelComponent extends React.Component<Props> {
             <i
               id={data.key}
               onClick={data.event.bind(this)}
-              className="fa fa-check-square-o mr-2 mt-2 text-muni"
+              className="icon icon-check mr-2 mt-2 text-muni"
             />
           ) : (
             <i
               id={data.key}
               onClick={data.event.bind(this)}
-              className="fa fa-square-o mr-2 mt-2 text-black"
+              className="icon icon-square mr-2 mt-2 text-black"
             />
           )}
           <span
