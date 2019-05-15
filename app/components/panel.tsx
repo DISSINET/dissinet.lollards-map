@@ -23,7 +23,7 @@ export default class PanelComponent extends React.Component<Props> {
             checked={data.checked}
             value={data.value}
             id={data.key}
-            className="mr-2 mt-4 leading-tight"
+            className="mr-2 mt-2 leading-tight"
             type="checkbox"
           />
           <span className="text-sm align-text-top tb-2  font-normal">

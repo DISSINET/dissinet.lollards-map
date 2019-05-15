@@ -5,6 +5,7 @@ export default class AppStore {
   _zoom;
   _extent;
   _filters;
+  _welcome;
   data;
 
   defaultFilters = [
@@ -80,9 +81,15 @@ export default class AppStore {
     this._center = observable.box([52, -1]);
     this._zoom = observable.box(9);
     this._extent = observable.box([]);
+    this._welcome = observable.box(true);
 
     this._filters = observable.box(this.defaultFilters);
     this.data = data;
+  }
+
+  @computed
+  get welcome() {
+    return toJS(this._welcome);
   }
 
   @computed
@@ -123,6 +130,16 @@ export default class AppStore {
     this._center.set(newCenter);
     this._zoom.set(newZoom);
     this._extent.set(newExtent);
+  }
+
+  @action
+  openWelcome() {
+    this._welcome.set(true);
+  }
+
+  @action
+  closeWelcome() {
+    this._welcome.set(false);
   }
 
   @action activateFilter(filterId) {

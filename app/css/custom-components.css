@@ -8,7 +8,6 @@ button {
   @apply text-xs;
   @apply py-2;
   @apply px-3;
-  @apply rounded;
   @apply m-2;
 }
 
@@ -35,7 +34,7 @@ button.success {
     stroke-miterlimit: 4;
   }
   .cluster-texts > * {
-    font-weight: bold;
+    font-weight: medium;
     fill: config("colors.white");
   }
 
@@ -49,6 +48,29 @@ button.success {
   @apply pin-y;
   @apply pin-r;
   @apply pin-l;
+  .welcome {
+    @apply z-20;
+    @apply absolute;
+    @apply pin-y;
+    @apply pin-r;
+    @apply pin-l;
+    .background {
+      @apply z-10;
+      @apply w-full;
+      @apply h-full;
+      @apply absolute;
+      @apply bg-grey;
+      opacity: 0.7;
+    }
+    .content {
+      @apply absolute;
+      @apply z-20;
+      @apply bg-white;
+      margin-left: 25%;
+      margin-top: 10%;
+      max-width: 50%;
+    }
+  }
   .panel {
     width: var(--panel-w);
     @apply absolute;
