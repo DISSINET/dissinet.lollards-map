@@ -86,7 +86,15 @@ export default class MapComponent extends React.Component<Props> {
         weight: 0,
         radius: 10,
         data: feature.properties
-      }).bindPopup("<p>" + "</p>");
+      }).bindPopup(
+        "<div><strong>" +
+          feature.properties.name +
+          " (" +
+          feature.properties.id +
+          ")</strong> - " +
+          feature.properties.yearsall +
+          "</div>"
+      );
     });
   }
 
