@@ -12,7 +12,6 @@ import {
 } from "react-leaflet";
 
 import "leaflet.markercluster";
-import "leaflet.markercluster.placementstrategies";
 
 type Props = {
   center: Array<Number>;
@@ -47,23 +46,11 @@ export default class MapComponent extends React.Component<Props> {
       this.clusters = L.markerClusterGroup({
         showCoverageOnHover: false,
         maxClusterRadius: 50,
-        firstCircleElements: 6,
-        clockHelpingCircleOptions: {
-          weight: 0.7,
-          opacity: 1,
-          color: "black",
-          fillOpacity: 0,
-          dashArray: "10 5",
-          transform: "translateY(-10px)"
-        },
-        spiderfyDistanceSurplus: 35,
         zoomToBoundsOnClick: true,
         removeOutsideVisibleBounds: true,
-        elementsPlacementStrategy: "clock-concentric",
         iconCreateFunction: this.clusterMarkerIcon.bind(this),
         animate: false,
-        singleMarkerMode: true,
-        spiderLegPolylineOptions: { weight: 0 }
+        singleMarkerMode: true
       });
       this.clusters.addTo(this.mapEl);
       this.loadClusters();
@@ -91,7 +78,7 @@ export default class MapComponent extends React.Component<Props> {
           feature.properties.name +
           " (" +
           feature.properties.id +
-          ")</strong> - " +
+          ")</strong> " +
           feature.properties.yearsall +
           "</div>"
       );
