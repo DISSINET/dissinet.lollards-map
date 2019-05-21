@@ -53,7 +53,9 @@ button.success {
 }
 
 .app-wrapper {
-  .heading {
+  .heading,
+  .hero {
+    background-position-x: -1px;
     @font-face {
       font-family: "Muni";
       src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
@@ -77,22 +79,23 @@ button.success {
       @apply w-full;
       @apply h-full;
       @apply absolute;
-      @apply bg-grey;
-      opacity: 0.7;
+      @apply bg-black;
+      opacity: 0.9;
     }
     .content {
       @apply absolute;
       @apply z-20;
       @apply bg-white;
-      margin-left: 20%;
+      margin-left: 10%;
       margin-top: 10%;
-      max-width: 60%;
+      max-width: 80%;
+      box-shadow: 0 0 0 3px config("colors.muni");
       .paragraph {
         @apply text-left;
         @apply mb-4;
       }
       .paragraph.indent {
-        text-indent: 3rem;
+        text-indent: 2rem;
       }
     }
   }

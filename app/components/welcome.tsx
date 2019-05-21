@@ -1,6 +1,8 @@
 import * as React from "react";
 import { propTypes } from "mobx-react";
 
+import Hero from "./hero";
+
 type Props = {};
 
 export default class WelcomeComponent extends React.Component<Props> {
@@ -18,11 +20,9 @@ export default class WelcomeComponent extends React.Component<Props> {
   render() {
     return (
       <div className="welcome" data-testid="welcome-wrapper">
-        <div className="content shadow-lg">
+        <div className="content ">
+          <Hero />
           <div className="px-6 py-4">
-            <div className="heading font-bold text-xl mb-2 text-muni">
-              Lollards, 1414-1522
-            </div>
             <p className="paragraph">
               This interactive map shows the places of origin of English
               dissidents under investigation for taking part in the revolts of

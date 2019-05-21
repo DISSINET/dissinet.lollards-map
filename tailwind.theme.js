@@ -2,7 +2,7 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 
 let theme = {
   transparent: "transparent",
-  muni: "#0000dc",
+  muni: "#5000dc",
   secondary: "#dcdc00",
   danger: "#dc0000",
   success: "#00dc00"
