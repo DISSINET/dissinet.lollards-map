@@ -29,11 +29,11 @@ export default class WelcomeComponent extends React.Component<Props> {
           )`
         }}
       >
-        <h1>Lollards, 1414-1522</h1>
-        <h3 className="heading subheading text-white font-medium">
+        <h2 className="heading text-white font-bold">Lollards, 1414-1522</h2>
+        <h4 className="subheading text-white font-medium">
           Places of origin of Lollards, unauthorized book owners, and
           participants in revolts related to Lollardy based on their trials
-        </h3>
+        </h4>
       </div>
     );
   }

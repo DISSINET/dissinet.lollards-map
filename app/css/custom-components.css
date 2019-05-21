@@ -53,9 +53,10 @@ button.success {
 }
 
 .app-wrapper {
-  .heading,
   .hero {
     background-position-x: -1px;
+    background-repeat: round;
+
     @font-face {
       font-family: "Muni";
       src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
@@ -86,9 +87,9 @@ button.success {
       @apply absolute;
       @apply z-20;
       @apply bg-white;
-      margin-left: 10%;
-      margin-top: 10%;
-      max-width: 80%;
+      margin-left: 15%;
+      margin-top: 5%;
+      max-width: 70%;
       box-shadow: 0 0 0 3px config("colors.muni");
       .paragraph {
         @apply text-left;
@@ -110,10 +111,10 @@ button.success {
     @apply pin-r;
 
     .heading {
-      @apply mb-4;
+      @apply text-2xl;
     }
     .subheading {
-      @apply -mt-4;
+      @apply text-base;
     }
   }
   .map {
