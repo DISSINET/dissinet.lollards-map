@@ -29,7 +29,7 @@ export default class PanelComponent extends React.Component<Props> {
             <i
               id={data.key}
               onClick={data.event.bind(this)}
-              className="icon icon-square mr-2 mt-2 text-black"
+              className="icon icon-circle mr-2 mt-2 text-black"
             />
           )}
           <span
