@@ -22,6 +22,12 @@ export default class WelcomeComponent extends React.Component<Props> {
       <div className="welcome" data-testid="welcome-wrapper">
         <div className="content ">
           <Hero />
+          <button
+            className="text-base text-black text-2xl absolute pin-t pin-r"
+            onClick={this.handleClose.bind(this)}
+          >
+            x
+          </button>
           <div className="px-6 py-4">
             <p className="paragraph">
               This interactive map shows the places of origin of English
@@ -81,12 +87,9 @@ export default class WelcomeComponent extends React.Component<Props> {
               <i className="mx-2 icon icon-drafting-compass" />
               Map by Adam Mertel.
             </p>
-            <button
-              className="primary float-right text-base"
-              onClick={this.handleClose.bind(this)}
-            >
-              close
-            </button>
+          </div>
+          <div className="footer w-100 bg-grey h-12 align-middle text-right p-4">
+            MUNI
           </div>
         </div>
         <div className="background" onClick={this.handleClose.bind(this)} />
