@@ -26,6 +26,7 @@ export default class App extends React.Component<Props> {
         <PanelComponent
           filters={store.filters}
           activateFilter={store.activateFilter.bind(store)}
+          openWelcome={store.openWelcome.bind(store)}
         />
         {store.welcome && (
           <WelcomeComponent handleClose={store.closeWelcome.bind(store)} />
