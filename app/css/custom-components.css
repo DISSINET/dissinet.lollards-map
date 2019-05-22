@@ -122,11 +122,10 @@ button.success {
 
     .legend {
       margin: 2em 0%;
-      width: 20em;
       img {
         width: 100%;
         background: url("./../../assets/legend.png") no-repeat;
-        height: 14em;
+        height: 12em;
         background-repeat: round;
         border: 2px solid white;
         border: 0;
