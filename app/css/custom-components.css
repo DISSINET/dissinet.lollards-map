@@ -1,5 +1,5 @@
 :root {
-  --panel-w: 30em;
+  --panel-w: 25em;
 }
 
 input[type="radio"]:after {
@@ -115,6 +115,19 @@ button.success {
     }
     .subheading {
       @apply text-base;
+    }
+
+    .legend {
+      margin: 2em 0%;
+      width: 20em;
+      img {
+        width: 100%;
+        background: url("./../../assets/legend.png") no-repeat;
+        height: 14em;
+        background-repeat: round;
+        border: 2px solid white;
+        border: 0;
+      }
     }
   }
   .map {
