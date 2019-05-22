@@ -112,6 +112,8 @@ button.success {
     @apply py-4;
     @apply pin-y;
     @apply pin-r;
+    max-height: 100%;
+    overflow-y: auto;
 
     .heading {
       @apply text-2xl;
