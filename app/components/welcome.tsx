@@ -97,6 +97,19 @@ export default class WelcomeComponent extends React.Component<Props> {
               <i className="mx-2 icon icon-drafting-compass" />
               Map by Adam Mertel.
             </p>
+            <p className="paragraph">
+              <i>
+                The digitization of this map is a part of the{" "}
+                <a target="_blank" href="www.dissinet.cz">
+                  Dissident Networks Project (DISSINET)
+                </a>
+                . The project received funding from the Czech Science Foundation
+                (project No. GX19-26975X “Dissident Religious Cultures in
+                Medieval Europe from the Perspective of Social Network Analysis
+                and Geographic Information Systems”). We gratefully acknowledge
+                this financial support.
+              </i>
+            </p>
           </div>
           <div className="footer w-100 bg-grey h-12 align-middle text-right p-4">
             MUNI

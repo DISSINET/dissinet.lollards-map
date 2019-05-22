@@ -94,6 +94,9 @@ button.success {
       .paragraph {
         @apply text-left;
         @apply mb-4;
+        i {
+          font-size: 80%;
+        }
       }
       .paragraph.indent {
         text-indent: 2rem;
