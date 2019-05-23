@@ -74,11 +74,11 @@ export default class MapComponent extends React.Component<Props> {
         radius: 10,
         data: feature.properties
       }).bindPopup(
-        "<div><strong>" +
-          feature.properties.name +
-          " (" +
+        "<div>[<i>" +
           feature.properties.id +
-          ")</strong> " +
+          "</i>] <strong>" +
+          feature.properties.name +
+          "</strong> " +
           feature.properties.yearsall +
           "</div>"
       );
