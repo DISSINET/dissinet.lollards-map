@@ -13,8 +13,25 @@ export default class WelcomeComponent extends React.Component<Props> {
   }
 
   handleClose() {
-    console.log("closing");
     this.props.handleClose();
+  }
+
+  handleKeyPress(e) {
+    if (e.key === "Escape") {
+      this.props.handleClose();
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress.bind(this), false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener(
+      "keydown",
+      this.handleKeyPress.bind(this),
+      false
+    );
   }
 
   render() {
