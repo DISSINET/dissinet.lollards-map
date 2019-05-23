@@ -1,5 +1,6 @@
 :root {
   --panel-w: 25em;
+  --panel-w-mobile: 15em;
 }
 
 input[type="radio"]:after {
@@ -64,11 +65,13 @@ button.success {
     }
     font-family: "Muni", Arial, Helvetica Neue, sans-serif;
   }
+
   font-family: Arial, Helvetica Neue, sans-serif;
   @apply absolute;
   @apply pin-y;
   @apply pin-r;
   @apply pin-l;
+
   .welcome {
     @apply z-20;
     @apply absolute;
