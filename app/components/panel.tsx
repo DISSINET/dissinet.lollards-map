@@ -91,6 +91,15 @@ export default class PanelComponent extends React.Component<Props> {
           <i className="mr-2 icon icon-info" />
           info
         </button>
+        <a
+          href="https://docs.google.com/spreadsheets/d/1SUUjjtBT7HBOS9V6USNPk4eR5SFSsSrDByRxrERgg7A"
+          target="_blank"
+        >
+          <button className="text-base primary">
+            <i className="mr-2 icon icon-database" />
+            dataset
+          </button>
+        </a>
       </div>
     );
   }
