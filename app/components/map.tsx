@@ -287,6 +287,13 @@ export default class MapComponent extends React.Component<Props> {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
+            <LayersControl.BaseLayer name="Imperium">
+              <TileLayer
+                maxNativeZoom={11}
+                attribution='<a href="http://dare.ht.lu.se/">Digital Atlas of the Roman Empire (DARE)</a>'
+                url="http://pelagios.org/tilesets/imperium/{z}/{x}/{y}.png"
+              />
+            </LayersControl.BaseLayer>
           </LayersControl>
         </Map>
       </div>
