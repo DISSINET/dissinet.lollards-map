@@ -94,6 +94,18 @@ button.success {
       margin-top: 5%;
       max-width: 70%;
       box-shadow: 0 0 0 3px config("colors.muni");
+
+      p.small {
+        font-size: 90%;
+        margin-top: 1rem;
+      }
+
+      ul {
+        @apply my-4;
+        li {
+          @apply my-2;
+        }
+      }
     }
   }
 
