@@ -131,10 +131,10 @@ button.success {
     overflow-y: auto;
 
     .heading {
-      @apply text-2xl;
+      font-size: 1.4rem;
     }
     .subheading {
-      @apply text-base;
+      font-size: 0.9rem;
     }
 
     .legend {
