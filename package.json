@@ -13,7 +13,7 @@
     "clean-dist": "rm -f -r -d dist",
     "start": "parcel app/index.html --open --no-cache",
     "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
-    "deploy": "rsync -avz build/ <user@url:/path> --delete",
+    "deploy": "rsync -avz dist/ hde@hde.geogr.muni.cz:~/lollards --delete",
     "build-deploy": "npm run build && npm run deploy",
     "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css",
     "test": "jest --detectOpenHandles",
