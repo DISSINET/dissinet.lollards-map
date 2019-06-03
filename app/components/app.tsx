@@ -29,7 +29,10 @@ export default class App extends React.Component<Props> {
           openWelcome={store.openWelcome.bind(store)}
         />
         {store.welcome && (
-          <WelcomeComponent handleClose={store.closeWelcome.bind(store)} />
+          <WelcomeComponent
+            data={store.data}
+            handleClose={store.closeWelcome.bind(store)}
+          />
         )}
       </div>
     );

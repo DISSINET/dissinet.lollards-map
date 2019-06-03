@@ -3,7 +3,10 @@ import { propTypes } from "mobx-react";
 
 import Hero from "./hero";
 
-type Props = {};
+type Props = {
+  data;
+  handleClose;
+};
 
 export default class WelcomeComponent extends React.Component<Props> {
   props;
@@ -71,8 +74,11 @@ export default class WelcomeComponent extends React.Component<Props> {
 
             <p className=" indent">
               {" "}
-              A total of <span className="text-bold">260 sites</span> were
-              transferred from the{" "}
+              A total of{" "}
+              <span className="text-bold">
+                {this.props.data.length} sites
+              </span>{" "}
+              were transferred from the{" "}
               <span className="text-italic">Atlas zur Kirchengeschichte</span>{" "}
               by Jedin et al. (data compiled by M. Lambert based on the analysis
               of trial records by J. A. F. Thomson and J. Fines). The map shows
