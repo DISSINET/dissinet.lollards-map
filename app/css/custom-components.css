@@ -94,18 +94,18 @@ button.success {
       margin-top: 5%;
       max-width: 70%;
       box-shadow: 0 0 0 3px config("colors.muni");
-      .paragraph {
-        @apply text-left;
-        @apply mb-4;
-        i {
-          font-size: 80%;
-        }
-      }
-      .paragraph.indent {
-        text-indent: 2rem;
-      }
     }
   }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+
   .panel {
     width: var(--panel-w);
     @apply absolute;

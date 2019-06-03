@@ -54,7 +54,13 @@ div.line {
 div.newline {
 }
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
+  &.indent {
+    text-indent: 2rem;
+  }
+  &.spaced {
+    margin-bottom: 1rem;
+  }
 }
 
 .heading,
@@ -126,9 +132,6 @@ span {
   }
 }
 
-p.indent {
-  text-indent: 2rem;
-}
 ul {
   list-style: none;
   padding: 0;
