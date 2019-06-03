@@ -12,7 +12,7 @@ export default class AppStore {
     {
       category: "revolts",
       id: "revolts-all",
-      label: "no filter",
+      label: "No filter",
       fn: p => true,
       active: true
     },
@@ -41,7 +41,7 @@ export default class AppStore {
     {
       category: "revolts",
       id: "revolts-both",
-      label: "both revolts",
+      label: "Both revolts",
       fn: p =>
         p.properties.revolt1414 === "1" && p.properties.revolt1431 === "1",
       active: false
@@ -49,7 +49,7 @@ export default class AppStore {
     {
       category: "revolts",
       id: "revolts-no",
-      label: "no revolt",
+      label: "No revolt",
       fn: p =>
         p.properties.revolt1414 !== "1" && p.properties.revolt1431 !== "1",
       active: false
@@ -57,21 +57,21 @@ export default class AppStore {
     {
       category: "books",
       id: "books-all",
-      label: "no filter",
+      label: "No filter",
       fn: p => true,
       active: true
     },
     {
       category: "books",
       id: "books-true",
-      label: "book mentioned",
+      label: "Book mentioned",
       fn: p => p.properties.books === "1",
       active: false
     },
     {
       category: "books",
       id: "books-false",
-      label: "no data on books",
+      label: "No data on books",
       fn: p => p.properties.books !== "1",
       active: false
     }
