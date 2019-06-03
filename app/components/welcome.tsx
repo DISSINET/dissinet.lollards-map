@@ -86,7 +86,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               accompanying text (by M. Lambert), but excluding three sites which
               could not be localised with enough certainty. The plotted sites
               indicate only the presence of suspected Lollards and revolt
-              participants only, not their numbers or importance.{" "}
+              participants, not their numbers or importance.{" "}
             </p>
 
             <p className=" indent">
@@ -119,7 +119,8 @@ export default class WelcomeComponent extends React.Component<Props> {
               which evidence concerning heresy or participation in revolts
               relates. The list also includes years which do not appear in the
               source map and are only mentioned in the accompanying text by M.
-              Lambert.
+              Lambert. Some years are marked by an asterisk (*). That means that
+              the precise locality is not known, only the diocese.
             </p>
 
             <ul>

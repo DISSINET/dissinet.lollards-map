@@ -29,7 +29,7 @@ export default class WelcomeComponent extends React.Component<Props> {
           )`
         }}
       >
-        <h2 className="heading text-white font-bold">Lollards, 1414-1522</h2>
+        <h2 className="heading text-white font-bold">Lollards, 1414–1522</h2>
         <h4 className="subheading text-white font-medium">
           Places of origin of Lollards, unauthorized book owners, and
           participants in revolts related to Lollardy based on their trials
