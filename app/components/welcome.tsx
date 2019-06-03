@@ -109,30 +109,44 @@ export default class WelcomeComponent extends React.Component<Props> {
               Lambert.
             </p>
 
-            <p className="my-2">
-              <i className="mx-2 icon icon-book" />
-              Data sources:{" "}
-              <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/">
-                Jedin et al., 1970
-              </a>
-              ;{" "}
-              <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/">
-                Thomson, 1970
-              </a>
-              ;
-              <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
-                Fines, 1964.
-              </a>
+            <ul>
+              <li>
+                <i className="mx-2 icon icon-book" />
+                Data sources:{" "}
+                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/">
+                  Jedin et al., 1970
+                </a>
+                ;{" "}
+                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/">
+                  Thomson, 1970
+                </a>
+                ;{" "}
+                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
+                  Fines, 1964.
+                </a>
+              </li>
+              <li>
+                <i className="mx-2 icon icon-layer-group" />
+                Digitized and geocoded by Jan Král.
+              </li>
+              <li>
+                <i className="mx-2 icon icon-drafting-compass" />
+                Map by{" "}
+                <a target="_blank" href="https://github.com/adammertel">
+                  Adam Mertel
+                </a>
+                .
+              </li>
+            </ul>
+            <p>
+              <b>Recommended citation:</b> Král, J., & Mertel, A. (2019).
+              Lollards, 1414–1522: Places of origin of Lollards, unauthorized
+              book owners, and participants in revolts related to Lollardy based
+              on their trials. Dissident Networks Project (DISSINET). Retrieved
+              May 25, 2019, from https://dissinet.cz/???.
             </p>
-            <p className="my-2">
-              <i className="mx-2 icon icon-layer-group" />
-              Digitized and geocoded by Jan Král.
-            </p>
-            <p className="my-2">
-              <i className="mx-2 icon icon-drafting-compass" />
-              Map by Adam Mertel.
-            </p>
-            <p className="paragraph">
+
+            <p className="paragraph small">
               <i>
                 The digitization of this map is a part of the{" "}
                 <a target="_blank" href="https://dissinet.cz">
