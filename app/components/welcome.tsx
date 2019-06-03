@@ -59,8 +59,8 @@ export default class WelcomeComponent extends React.Component<Props> {
             <p>
               This interactive map is based on the{" "}
               <span className="text-bold">Lollard trials.</span> It shows the
-              places of origin of English dissidents under investigation for
-              taking part in{" "}
+              <span className="text-bold">places of origin</span> of English
+              dissidents under investigation for taking part in{" "}
               <span className="text-bold">the revolts of 1414 or 1431</span>,
               related to Lollardy, or holding various{" "}
               <span className="text-bold">heterodox opinions</span> that are
@@ -138,6 +138,10 @@ export default class WelcomeComponent extends React.Component<Props> {
                 <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
                   Fines, 1964.
                 </a>
+              </li>
+              <li>
+                <i className="mx-2 icon icon-scroll" />
+                Primary sources: trial records
               </li>
               <li>
                 <i className="mx-2 icon icon-layer-group" />
