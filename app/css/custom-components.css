@@ -1,5 +1,5 @@
 :root {
-  --panel-w: 25em;
+  --panel-w: 24em;
   --panel-w-mobile: 15em;
 }
 
@@ -73,7 +73,7 @@ button.success {
   @apply pin-l;
 
   ul {
-    @apply my-4;
+    @apply mb-4;
     display: table;
     li {
       display: table-row;
@@ -128,8 +128,6 @@ button.success {
     @apply absolute;
     @apply bg-white;
     @apply z-10;
-    @apply px-4;
-    @apply py-4;
     @apply pin-y;
     @apply pin-r;
     max-height: 100%;
@@ -143,7 +141,6 @@ button.success {
     }
 
     .legend {
-      margin: 2em 0%;
       img {
         width: 100%;
         background: url("./../../assets/legend.png") no-repeat;
@@ -152,6 +149,9 @@ button.success {
         border: 2px solid white;
         border: 0;
       }
+    }
+
+    .footer {
     }
   }
   .map {
