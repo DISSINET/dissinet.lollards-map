@@ -193,8 +193,8 @@ export default class WelcomeComponent extends React.Component<Props> {
               https://dissinet.cz/lollards-map.
             </p>
           </div>
-          <div className="footer w-100 bg-grey p-4">
-            <div className="paragraph small text-left text-sm mr-32">
+          <div className="footer w-100 bg-grey p-4 table-row">
+            <div className="table-cell p-4 w-2/3 align-top paragraph small text-sm mr-32">
               <i>
                 The digitization of this map is a part of the{" "}
                 <a
@@ -211,10 +211,10 @@ export default class WelcomeComponent extends React.Component<Props> {
                 this financial support.
               </i>
             </div>
-            <div className="text-right ">
-              <a target="_blank" href="https://dissinet.cz">
+            <div className="table-cell align-bottom text-right">
+              <a className="" target="_blank" href="https://dissinet.cz">
                 <svg
-                  className="absolute pin-b pin-r"
+                  className=""
                   width="178"
                   height="68"
                   viewBox="0 0 178 68"

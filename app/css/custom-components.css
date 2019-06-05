@@ -105,7 +105,9 @@ button.success {
       margin-left: 15%;
       margin-top: 5%;
       max-width: 70%;
-      box-shadow: 0 0 0 3px config("colors.muni");
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 90%;
 
       p.small {
         font-size: 90%;
@@ -150,10 +152,12 @@ button.success {
         border: 0;
       }
     }
-
-    .footer {
-    }
   }
+
+  .panel-footer {
+    width: var(--panel-w);
+  }
+  
   .map {
     @apply z-0;
     @apply absolute;
@@ -186,6 +190,6 @@ button.success {
   height: 40px;
   position: fixed;
   top: 0px;
-  z-index: 5000;
+  z-index: 20;
   right: 0;
 }
