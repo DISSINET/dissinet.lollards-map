@@ -115,7 +115,7 @@ export default class PanelComponent extends React.Component<Props> {
           </div>
         </div>
 
-        <div className="absolute pin-b w-full footer w-100 bg-grey m-0 table-row">
+        <div className="pin-l pin-r pin-b w-full footer w-100 bg-grey m-0">
           <div className="text-right">
             <a target="_blank" href="https://dissinet.cz">
               <svg

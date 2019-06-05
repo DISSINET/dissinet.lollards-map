@@ -7,6 +7,7 @@ export default class AppStore {
   _filters;
   _welcome;
   data;
+  _panel;
 
   defaultFilters = [
     {
@@ -81,7 +82,8 @@ export default class AppStore {
     this._center = observable.box([52, -1]);
     this._zoom = observable.box(9);
     this._extent = observable.box([]);
-    this._welcome = observable.box(true);
+    this._welcome = observable.box(false);
+    this._panel = observable.box(true);
 
     this._filters = observable.box(this.defaultFilters);
     this.data = data;
@@ -90,6 +92,11 @@ export default class AppStore {
   @computed
   get welcome() {
     return toJS(this._welcome);
+  }
+
+  @computed
+  get panel() {
+    return toJS(this._panel);
   }
 
   @computed
@@ -132,6 +139,10 @@ export default class AppStore {
     this._extent.set(newExtent);
   }
 
+  @action
+  togglePanel() {
+    this._panel.set(!this.panel);
+  }
   @action
   openWelcome() {
     this._welcome.set(true);

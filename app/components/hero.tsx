@@ -20,7 +20,7 @@ export default class WelcomeComponent extends React.Component<Props> {
   render() {
     return (
       <div
-        className="hero font-bold text-xl mb-2 pt-12 pb-4 px-4 text-white bg-cover"
+        className="hero font-bold text-xl pt-12 pb-4 px-4 text-white bg-cover"
         data-testid="welcome-wrapper"
         style={{
           background: " cover",

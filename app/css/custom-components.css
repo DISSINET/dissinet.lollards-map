@@ -159,7 +159,6 @@ button.success {
     @apply absolute;
     @apply pin-y;
     @apply pin-l;
-    width: calc(100% - var(--panel-w));
     .leaflet-container {
       @apply w-full;
       @apply h-full;
@@ -169,4 +168,24 @@ button.success {
       filter: sepia(0.2) grayscale(0.5);
     }
   }
+}
+
+.panel-on {
+  .map {
+    width: calc(100% - var(--panel-w));
+  }
+}
+.panel-off {
+  .map {
+    width: 100%;
+  }
+}
+
+.panel-hider {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  z-index: 5000;
+  right: 0;
 }

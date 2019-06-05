@@ -59,6 +59,7 @@ export default class MapComponent extends React.Component<Props> {
 
   componentDidUpdate() {
     this.loadClusters();
+    this.mapEl.invalidateSize();
   }
 
   loadClusters() {
