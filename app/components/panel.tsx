@@ -21,21 +21,23 @@ export default class PanelComponent extends React.Component<Props> {
 
   renderCheckbox(data: { key; value; label; checked; event; style? }) {
     return (
-      <div key={data.key} className="md:items-center ">
+      <li key={data.key} className="md:items-center ">
         <label className="block text-gray-500 font-bold">
-          {data.checked ? (
-            <i
-              id={data.key}
-              onClick={data.event.bind(this)}
-              className="icon icon-check mr-2 mt-2 text-muni"
-            />
-          ) : (
-            <i
-              id={data.key}
-              onClick={data.event.bind(this)}
-              className="icon icon-circle mr-2 mt-2 text-black"
-            />
-          )}
+          <span>
+            {data.checked ? (
+              <i
+                id={data.key}
+                onClick={data.event.bind(this)}
+                className="icon icon-check mr-2 mt-2 text-muni"
+              />
+            ) : (
+              <i
+                id={data.key}
+                onClick={data.event.bind(this)}
+                className="icon icon-circle mr-2 mt-2 text-black"
+              />
+            )}
+          </span>
           <span
             id={data.key}
             onClick={data.event.bind(this)}
@@ -44,7 +46,7 @@ export default class PanelComponent extends React.Component<Props> {
             {data.label}
           </span>
         </label>
-      </div>
+      </li>
     );
   }
 
@@ -55,31 +57,35 @@ export default class PanelComponent extends React.Component<Props> {
         <Hero />
         <br />
         <b>revolts</b>
-        {this.props.filters
-          .filter(f => f.category === "revolts")
-          .map(revoltFilter => {
-            return this.renderCheckbox({
-              key: revoltFilter.id,
-              value: revoltFilter.id,
-              label: revoltFilter.label,
-              checked: revoltFilter.active,
-              event: this.toggleCheckbox
-            });
-          })}
+        <ul>
+          {this.props.filters
+            .filter(f => f.category === "revolts")
+            .map(revoltFilter => {
+              return this.renderCheckbox({
+                key: revoltFilter.id,
+                value: revoltFilter.id,
+                label: revoltFilter.label,
+                checked: revoltFilter.active,
+                event: this.toggleCheckbox
+              });
+            })}
+        </ul>
 
         <br />
         <b>books</b>
-        {this.props.filters
-          .filter(f => f.category === "books")
-          .map(bookFilter => {
-            return this.renderCheckbox({
-              key: bookFilter.id,
-              value: bookFilter.id,
-              label: bookFilter.label,
-              checked: bookFilter.active,
-              event: this.toggleCheckbox
-            });
-          })}
+        <ul>
+          {this.props.filters
+            .filter(f => f.category === "books")
+            .map(bookFilter => {
+              return this.renderCheckbox({
+                key: bookFilter.id,
+                value: bookFilter.id,
+                label: bookFilter.label,
+                checked: bookFilter.active,
+                event: this.toggleCheckbox
+              });
+            })}
+        </ul>
         <div className="legend">
           <img src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7" />
         </div>

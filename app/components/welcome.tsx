@@ -59,7 +59,7 @@ export default class WelcomeComponent extends React.Component<Props> {
             <p>
               This interactive map is based on the{" "}
               <span className="text-bold">Lollard trials.</span> It shows the
-              <span className="text-bold">places of origin</span> of English
+              <span className="text-bold"> places of origin</span> of English
               dissidents under investigation for taking part in{" "}
               <span className="text-bold">the revolts of 1414 or 1431</span>,
               related to Lollardy, or holding various{" "}
@@ -125,35 +125,47 @@ export default class WelcomeComponent extends React.Component<Props> {
 
             <ul>
               <li>
-                <i className="mx-2 icon icon-book" />
-                Data sources:{" "}
-                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/">
-                  Jedin et al., 1970
-                </a>
-                ;{" "}
-                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/">
-                  Thomson, 1970
-                </a>
-                ;{" "}
-                <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
-                  Fines, 1964.
-                </a>
+                <span>
+                  <i className="mx-2 icon icon-book" />
+                </span>
+                <span>
+                  Data sources:{" "}
+                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/">
+                    Jedin et al., 1970
+                  </a>
+                  ;{" "}
+                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/">
+                    Thomson, 1970
+                  </a>
+                  ;{" "}
+                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
+                    Fines, 1964.
+                  </a>
+                </span>
               </li>
               <li>
-                <i className="mx-2 icon icon-scroll" />
-                Primary sources: trial records
+                <span>
+                  <i className="mx-2 icon icon-scroll" />
+                </span>
+                <span>Type of primary source: trial records.</span>
               </li>
               <li>
-                <i className="mx-2 icon icon-layer-group" />
-                Digitized and geocoded by Jan Král.
+                <span>
+                  <i className="mx-2 icon icon-layer-group" />
+                </span>
+                <span>Digitized and geocoded by Jan Král.</span>
               </li>
               <li>
-                <i className="mx-2 icon icon-drafting-compass" />
-                Map by{" "}
-                <a target="_blank" href="https://github.com/adammertel">
-                  Adam Mertel
-                </a>
-                .
+                <span>
+                  <i className="mx-2 icon icon-drafting-compass" />
+                </span>
+                <span>
+                  Map by{" "}
+                  <a target="_blank" href="https://github.com/adammertel">
+                    Adam Mertel
+                  </a>
+                  .
+                </span>
               </li>
             </ul>
             <p>

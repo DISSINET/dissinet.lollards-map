@@ -72,6 +72,18 @@ button.success {
   @apply pin-r;
   @apply pin-l;
 
+  ul {
+    @apply my-4;
+    display: table;
+    li {
+      display: table-row;
+      @apply my-2;
+      span {
+        @apply table-cell;
+        min-width: 25px;
+      }
+    }
+  }
   .welcome {
     @apply z-20;
     @apply absolute;
@@ -98,18 +110,6 @@ button.success {
       p.small {
         font-size: 90%;
         margin-top: 1rem;
-      }
-
-      ul {
-        @apply my-4;
-        display: table;
-        li {
-          display: table-row;
-          @apply my-2;
-          span {
-            @apply table-cell;
-          }
-        }
       }
     }
   }
