@@ -130,15 +130,27 @@ export default class WelcomeComponent extends React.Component<Props> {
                 </span>
                 <span>
                   Data sources:{" "}
-                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/">
+                  <a
+                    title="bibliographic record in Zotero"
+                    target="_blank"
+                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/"
+                  >
                     Jedin et al., 1970
                   </a>
                   ;{" "}
-                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/">
+                  <a
+                    title="bibliographic record in Zotero"
+                    target="_blank"
+                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/"
+                  >
                     Thomson, 1970
                   </a>
                   ;{" "}
-                  <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/">
+                  <a
+                    title="bibliographic record in Zotero"
+                    target="_blank"
+                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/"
+                  >
                     Fines, 1964.
                   </a>
                 </span>
@@ -161,7 +173,11 @@ export default class WelcomeComponent extends React.Component<Props> {
                 </span>
                 <span>
                   Map by{" "}
-                  <a target="_blank" href="https://github.com/adammertel">
+                  <a
+                    title="personal github page"
+                    target="_blank"
+                    href="https://github.com/adammertel"
+                  >
                     Adam Mertel
                   </a>
                   .
@@ -181,7 +197,11 @@ export default class WelcomeComponent extends React.Component<Props> {
             <div className="paragraph small text-left text-sm mr-32">
               <i>
                 The digitization of this map is a part of the{" "}
-                <a target="_blank" href="https://dissinet.cz">
+                <a
+                  title="dissinet webpage"
+                  target="_blank"
+                  href="https://dissinet.cz"
+                >
                   Dissident Networks Project (DISSINET)
                 </a>
                 . The project received funding from the Czech Science Foundation
