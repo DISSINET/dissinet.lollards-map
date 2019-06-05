@@ -272,28 +272,27 @@ export default class MapComponent extends React.Component<Props> {
         >
           <ScaleControl />
           <LayersControl position="topright">
-            <LayersControl.BaseLayer
-              name="OpenStreetMap.BlackAndWhite"
-              checked={true}
-            >
-              <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
-              />
-            </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="OpenStreetMap.Mapnik">
-              <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-            </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="AWMC">
+            <LayersControl.BaseLayer name="AWMC" checked={true}>
               <TileLayer
                 maxNativeZoom={15}
                 attribution="awmc"
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
+            <LayersControl.BaseLayer name="Esri">
+              <TileLayer
+                attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+                url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              />
+            </LayersControl.BaseLayer>
+            <LayersControl.Overlay checked={true} name="stamen labels">
+              <TileLayer
+                attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}{r}.{ext}"
+                subdomains="abcd"
+                ext="png"
+              />
+            </LayersControl.Overlay>
           </LayersControl>
         </Map>
       </div>
