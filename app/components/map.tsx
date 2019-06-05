@@ -287,11 +287,11 @@ export default class MapComponent extends React.Component<Props> {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="Imperium">
+            <LayersControl.BaseLayer name="AWMC">
               <TileLayer
-                maxNativeZoom={11}
-                attribution='<a href="http://dare.ht.lu.se/">Digital Atlas of the Roman Empire (DARE)</a>'
-                url="http://pelagios.org/tilesets/imperium/{z}/{x}/{y}.png"
+                maxNativeZoom={15}
+                attribution="awmc"
+                url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
           </LayersControl>
