@@ -23,7 +23,7 @@ export default class App extends React.Component<Props> {
       <div className={store.panel ? "panel-on" : "panel-off"}>
         {store.panel ? (
           <button
-            className=" m-0 panel-hider on text-base muni bg-black"
+            className="m-0 panel-hider on text-base muni bg-black"
             onClick={this.handleTogglePanel.bind(this)}
             title="toggle panel"
           >
