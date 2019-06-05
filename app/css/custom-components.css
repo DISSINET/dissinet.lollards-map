@@ -164,5 +164,9 @@ button.success {
       @apply w-full;
       @apply h-full;
     }
+
+    .leaflet-tile-container {
+      filter: sepia(0.2) grayscale(0.5);
+    }
   }
 }

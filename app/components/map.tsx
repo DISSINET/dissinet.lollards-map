@@ -271,8 +271,8 @@ export default class MapComponent extends React.Component<Props> {
           onViewportChanged={this.handleMapMove.bind(this)}
         >
           <ScaleControl />
-          {this.props.zoom < 12 ? (
-            <LayerGroup>
+          {this.props.zoom < 11 ? (
+            <LayerGroup className="awmc">
               <TileLayer
                 maxNativeZoom={15}
                 attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
@@ -286,10 +286,12 @@ export default class MapComponent extends React.Component<Props> {
               />
             </LayerGroup>
           ) : (
-            <TileLayer
-              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+            <LayerGroup className="osm">
+              <TileLayer
+                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+                url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+              />
+            </LayerGroup>
           )}
         </Map>
       </div>
