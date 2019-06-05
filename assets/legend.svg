@@ -128,18 +128,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="1050.3718"
-     inkscape:cy="288.00983"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="663.39651"
+     inkscape:cy="373.22867"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
      inkscape:snap-text-baseline="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1018"
-     inkscape:window-x="0"
-     inkscape:window-y="34"
+     inkscape:window-height="1052"
+     inkscape:window-x="336"
+     inkscape:window-y="1440"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -161,11 +161,20 @@
      transform="translate(0,-87)">
     <rect
        id="rect81"
-       width="371.17261"
+       width="364.43741"
        height="190.92371"
-       x="-2.6458347"
-       y="86.089287"
-       style="fill:#cccccc;stroke-width:0.18568069" />
+       x="16.43721"
+       y="86.463463"
+       style="fill:none;stroke-width:0.18398832;fill-opacity:1"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="opacity:1;fill:#b8c2cc;fill-opacity:1;stroke:#fcffff;stroke-width:1.07306099;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:13.98425293;stroke-opacity:1"
+       id="path908"
+       cx="70.62925"
+       cy="207.19164"
+       rx="59.46347"
+       ry="59.463467" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -273,58 +282,58 @@
       </g>
     </g>
     <ellipse
-       style="fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.0116508;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795-2"
-       cx="244.47098"
-       cy="241.45883"
-       rx="16.780979"
-       ry="16.025026" />
+       cx="249.42848"
+       cy="247.71906"
+       rx="16.494173"
+       ry="16.494175" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="70.263641"
-       y="115.4006"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="89.346687"
+       y="113.52971"
        id="text4788"><tspan
          sodipodi:role="line"
-         x="70.263641"
-         y="115.4006"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="89.346687"
+         y="113.52971"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan4790">at least one dissident from this</tspan><tspan
          sodipodi:role="line"
-         x="70.263641"
-         y="128.62978"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="89.346687"
+         y="129.40471"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan852">location was involved in the 1414 revolt </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="138.43449"
        y="165.5381"
        id="text4788-6"><tspan
          sodipodi:role="line"
          x="138.43449"
          y="165.5381"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:0.26458332;"
          id="tspan4790-0">at least one dissident from this</tspan><tspan
          sodipodi:role="line"
          x="138.43449"
          y="178.76727"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:0.26458332;"
          id="tspan856">location was involved in the 1431 revolt </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="129.27104"
-       y="216.99109"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="108.63354"
+       y="262.24261"
        id="text4788-6-6"><tspan
          sodipodi:role="line"
-         x="129.27104"
-         y="216.99109"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="108.63354"
+         y="262.24261"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan4790-0-2">book mentioned</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.70000005;stroke-opacity:1;marker-start:url(#marker1544)"
-       d="m 55.395245,165.46372 12.131052,-47.3835"
+       d="m 55.395245,165.46372 29.34321,-45.88679"
        id="path4845"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -336,38 +345,37 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.70000005;stroke-opacity:1;marker-start:url(#marker1554)"
-       d="m 114.30971,226.65793 44.23535,-6.439"
+       d="m 114.30971,231.52224 36.32444,16.85991"
        id="path4845-8-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
-    <ellipse
-       style="display:inline;fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+    <circle
+       style="display:inline;fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.83413911;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795-1"
-       cx="245.00014"
-       cy="207.00389"
-       rx="7.727098"
-       ry="7.9160862" />
+       cx="249.42848"
+       cy="213.89696"
+       r="11.082931" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="265.44855"
-       y="243.93512"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="272.40683"
+       y="250.67032"
        id="text4788-6-6-6"><tspan
          sodipodi:role="line"
-         x="265.44855"
-         y="243.93512"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="272.40683"
+         y="250.67032"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan4790-0-2-6">more localities</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="263.81058"
-       y="210.52199"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="270.76886"
+       y="217.25719"
        id="text4788-6-6-6-2"><tspan
          sodipodi:role="line"
-         x="263.81058"
-         y="210.52199"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         x="270.76886"
+         y="217.25719"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:arial;-inkscape-font-specification:'arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
          id="tspan4790-0-2-6-1">single locality</tspan></text>
   </g>
 </svg>
