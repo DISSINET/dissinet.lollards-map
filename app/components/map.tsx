@@ -271,35 +271,26 @@ export default class MapComponent extends React.Component<Props> {
           onViewportChanged={this.handleMapMove.bind(this)}
         >
           <ScaleControl />
-          <LayersControl position="topright">
-            <LayersControl.BaseLayer name="AWMC" checked={true}>
+          {this.props.zoom < 12 ? (
+            <LayerGroup>
               <TileLayer
                 maxNativeZoom={15}
-                attribution="awmc"
+                attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
-            </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="Esri">
-              <TileLayer
-                attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
-                url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              />
-            </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="OSM">
-              <TileLayer
-                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-            </LayersControl.BaseLayer>
-            <LayersControl.Overlay checked={true} name="stamen labels">
               <TileLayer
                 attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}{r}.{ext}"
                 subdomains="abcd"
                 ext="png"
               />
-            </LayersControl.Overlay>
-          </LayersControl>
+            </LayerGroup>
+          ) : (
+            <TileLayer
+              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+          )}
         </Map>
       </div>
     );
