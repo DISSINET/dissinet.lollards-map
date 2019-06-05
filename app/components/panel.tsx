@@ -54,7 +54,7 @@ export default class PanelComponent extends React.Component<Props> {
       <div className="panel" data-testid="panel-wrapper">
         <Hero />
         <br />
-        <b>Revolts</b>
+        <b>revolts</b>
         {this.props.filters
           .filter(f => f.category === "revolts")
           .map(revoltFilter => {
@@ -68,7 +68,7 @@ export default class PanelComponent extends React.Component<Props> {
           })}
 
         <br />
-        <b>Books</b>
+        <b>books</b>
         {this.props.filters
           .filter(f => f.category === "books")
           .map(bookFilter => {

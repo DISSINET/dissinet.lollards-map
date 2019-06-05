@@ -102,8 +102,13 @@ button.success {
 
       ul {
         @apply my-4;
+        display: table;
         li {
+          display: table-row;
           @apply my-2;
+          span {
+            @apply table-cell;
+          }
         }
       }
     }
