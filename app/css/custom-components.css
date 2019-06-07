@@ -133,7 +133,6 @@ button.success {
     @apply pin-y;
     @apply pin-r;
     max-height: 100%;
-    overflow-y: auto;
 
     .heading {
       font-size: 1.4rem;
@@ -152,12 +151,20 @@ button.success {
         border: 0;
       }
     }
+    .panel-content {
+      position: absolute;
+      top: 170px;
+      width: 100%;
+      top: 170px;
+      bottom: 75px;
+      overflow-y: auto;
+    }
   }
 
   .panel-footer {
     width: var(--panel-w);
   }
-  
+
   .map {
     @apply z-0;
     @apply absolute;
