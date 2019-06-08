@@ -185,7 +185,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               </li>
             </ul>
             <p>
-              <b>Recommended citation:</b> Král, J., Mertel, A., & Zbíral D.
+              <b>Recommended citation:</b> Král, J., Mertel, A., & Zbíral, D.
               (2019). Lollards, 1414–1522: Places of origin of Lollards,
               unauthorized book owners, and participants in revolts related to
               Lollardy based on their trials. Dissident Networks Project
