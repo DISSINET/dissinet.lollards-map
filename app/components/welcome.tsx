@@ -190,7 +190,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               book owners, and participants in revolts related to Lollardy based
               on their trials. Dissident Networks Project (DISSINET). Retrieved{" "}
               {now.toLocaleDateString("en-US", dateOptions)}, from
-              https://dissinet.cz/outputs/lollards-map.
+              https://dissinet.cz/outputs/maps/lollards.
             </p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">

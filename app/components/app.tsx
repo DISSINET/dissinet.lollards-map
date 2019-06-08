@@ -53,7 +53,10 @@ export default class App extends React.Component<Props> {
             />
             <div className="panel-footer absolute pin-r pin-b  w-100 bg-grey m-0 z-20">
               <div className="text-right">
-                <a target="_blank" href="https://dissinet.cz">
+                <a
+                  target="_blank"
+                  href="https://dissinet.cz/outputs/maps/lollards"
+                >
                   <svg
                     className="pin-r"
                     width="178"
