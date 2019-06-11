@@ -45,7 +45,7 @@ export default class MapComponent extends React.Component<Props> {
 
       this.clusters = L.markerClusterGroup({
         showCoverageOnHover: false,
-        maxClusterRadius: 50,
+        maxClusterRadius: 80,
         zoomToBoundsOnClick: true,
         removeOutsideVisibleBounds: true,
         iconCreateFunction: this.clusterMarkerIcon.bind(this),
@@ -100,35 +100,17 @@ export default class MapComponent extends React.Component<Props> {
     svgEl.setAttribute("id", "marker " + cluster._leaflet_id);
 
     const dFire =
-      "m 10.859695,296.52825 c 0,0 -8.9449934,-0.43314 -9.0537544,-6.94902 -0.1086139,-6.50707 7.3176902,-11.6259 9.2542064,-18.57522 1.569022,10.55683 12.932719,11.69244 12.695304,18.90932 -0.101322,5.67974 -10.156242,6.64833 -10.156242,6.64833 0,0 6.013563,-1.43657 5.679477,-4.87767 0.03341,-2.93997 -2.639287,-3.67496 -4.109269,-6.14721 -0.777706,2.01011 -2.037931,3.14042 -2.80633,3.17383 -0.7684,0.0334 -1.610499,-2.60816 -2.8731476,-5.67947 -0.627883,4.11156 -3.2190346,5.71501 -3.3408692,8.15171 -0.2004518,4.00905 4.7106248,5.3454 4.7106248,5.3454 z";
+      "m 11,296 c 0,0 -9,-0 -9,-7 -0,-7 7,-12 9,-19 2,11 13,12 13,19 -0,6 -10,7 -10,7 0,0 6,-1 6,-5 0,-3 -3,-4 -4,-6 -1,2 -2,3 -3,3 -1,0 -2,-3 -3,-6 -1,4 -3,6 -3,8 -0,4 5,5 5,5 z";
     const dBook = `
     <g
-      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.67237687;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+      style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
       transform="translate(0,-160) scale(0.6 0.6)">
-     <path
-        style="fill:none;stroke:#000000"
-        d="m 24.114374,290.37551 -16.2169117,0.006 0.08977,3.05488 15.9959607,-0.0873"
-        id="path870-2" />
-     <path
-        style="fill:#000000;stroke:#000000"
-        d="m 7.7984524,293.43039 -5.3810214,-15.49195 -0.053384,-2.94076 5.3445284,15.37783 0.08977,3.05488"
-        />
-     <path
-        style="fill:#000000;stroke:#000000"
-        d="m 2.3640894,274.99768 15.8123126,0.01 6.109986,15.36475 H 7.7086074 Z"
-         />
-     <path
-        style="fill:#ffffff;stroke:none"
-        d="m 19.333204,276.87518 -6.289154,0.0242 0.942515,2.12141 6.266267,-0.011 z"
-         />
-     <path
-        style="fill:#ffffff;stroke:none"
-        d="m 22.662633,285.30666 -6.461403,0.0421 0.959766,2.10418 6.421339,-0.011 z"
-    />
-     <path
-        style="fill:none;stroke:#ffffff"
-        d="m 3.9152936,276.58523 4.2905132,12.23799"
-  />
+     <path style="fill:none" d="m 24,290 -16,0 0,3 16,-0" />
+     <path d="m 8,294 -5.5,-15.5 -0.05,-3 5.5,15.5 0.1,3" />
+     <path d="m 2,275 16,0 6,15 H 8 Z" />
+     <path style="fill:#ffffff;stroke:none" d="m 19,277 -6,0 1,2 6,-0.011 z" />
+     <path style="fill:#ffffff;stroke:none" d="m 23,285 -6.5,0 1,2 6.5,-0 z" />
+     <path style="fill:none;stroke:#ffffff" d="m 4,277 4,12" />
    </g>`;
 
     const svg = d3
