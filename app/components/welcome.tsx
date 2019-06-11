@@ -191,7 +191,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               Lollardy based on their trials. Dissident Networks Project
               (DISSINET). Retrieved{" "}
               {now.toLocaleDateString("en-US", dateOptions)}, from
-              https://dissinet.cz/outputs/maps/lollards.
+              https://dissinet.cz/publications/maps/lollards.
             </p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">

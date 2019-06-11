@@ -2,7 +2,7 @@
 
 ## Places of origin of Lollards, unauthorized book owners, and participants in revolts related to Lollardy based on their
 
-### https://dissinet.cz/outputs/maps/lollards
+### https://dissinet.cz/publications/maps/lollards
 
 ### [dissinet project](http://dissinet.cz)
 
@@ -12,6 +12,6 @@ This interactive map is based on the Lollard trials. It shows the places of orig
 - Type of primary source: trial records.
 - Digitized and geocoded by **Jan Král**.
 - Map by [**Adam Mertel**](https://github.com/adammertel).
-- Recommended citation: `Král, J., Mertel, A., & Zbíral, D. (2019). Lollards, 1414–1522: Places of origin of Lollards, unauthorized book owners, and participants in revolts related to Lollardy based on their trials. Dissident Networks Project (DISSINET). Retrieved June 3, 2019, from https://dissinet.cz/outputs/maps/lollards.`
+- Recommended citation: `Král, J., Mertel, A., & Zbíral, D. (2019). Lollards, 1414–1522: Places of origin of Lollards, unauthorized book owners, and participants in revolts related to Lollardy based on their trials. Dissident Networks Project (DISSINET). Retrieved June 3, 2019, from https://dissinet.cz/publications/maps/lollards.`
 
 ![lollards map screen](./assets/screen.png)
