@@ -121,7 +121,7 @@ button.success {
     margin-bottom: 0.5rem;
   }
   .subheading {
-    font-size: 1.2rem;
+    font-size: 6rem;
     margin-top: -0.5rem;
   }
 
@@ -135,10 +135,10 @@ button.success {
     max-height: 100%;
 
     .heading {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     .subheading {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     .legend {
@@ -153,9 +153,8 @@ button.success {
     }
     .panel-content {
       position: absolute;
-      top: 170px;
+      top: 13em;
       width: 100%;
-      top: 170px;
       bottom: 75px;
       overflow-y: auto;
     }
