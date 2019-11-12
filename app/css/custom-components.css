@@ -117,11 +117,11 @@ button.success {
   }
 
   .heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
   }
   .subheading {
-    font-size: 6rem;
+    font-size: 0.95rem;
     margin-top: -0.5rem;
   }
 
@@ -133,13 +133,6 @@ button.success {
     @apply pin-y;
     @apply pin-r;
     max-height: 100%;
-
-    .heading {
-      font-size: 1.6rem;
-    }
-    .subheading {
-      font-size: 0.95rem;
-    }
 
     .legend {
       img {
