@@ -9,6 +9,7 @@ import data from "./../data/data";
 console.log(data);
 
 window["store"] = new Store(data);
+window["version"] = process.env.npm_package_version;
 
 ReactDOM.render(
   React.createElement(App, { store: window["store"] }),
