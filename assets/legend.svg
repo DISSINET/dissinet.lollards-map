@@ -128,11 +128,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="464.55576"
-     inkscape:cy="162.70267"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="389.3665"
+     inkscape:cy="206.2408"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4611"
+     inkscape:current-layer="g4622"
      showgrid="false"
      showguides="false"
      inkscape:snap-text-baseline="true"
@@ -183,7 +183,7 @@
      style="display:inline"
      transform="translate(0,-87)">
     <circle
-       style="fill:#0000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#0000dc;fill-opacity:1;stroke:#fcffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795"
        cx="67.557549"
        cy="209.40984"
@@ -191,10 +191,10 @@
     <g
        id="g4611"
        transform="translate(2.6458333,102.43155)"
-       style="stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1">
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1">
       <circle
          r="20"
-         style="fill:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1"
+         style="fill:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1"
          cy="125.22382"
          cx="84.111778"
          id="path47-5" />
@@ -242,10 +242,10 @@
     <g
        id="g4622"
        transform="translate(17.008928,96.761905)"
-       style="stroke:#0000dc;stroke-opacity:1;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke:#0000dc;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none">
       <circle
          r="15"
-         style="fill:#ffffff;stroke-width:1.5;stroke:#0000dc;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+         style="fill:#ffffff;stroke-width:2;stroke:#0000dc;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
          cy="92.67244"
          cx="36.348656"
          id="path47-5-6" />
@@ -263,10 +263,10 @@
     <g
        transform="translate(48.31801,96.761905)"
        id="g4622-2"
-       style="stroke:#0000dc;stroke-opacity:1;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke:#0000dc;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none">
       <circle
          r="15"
-         style="fill:#ffffff;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1"
+         style="fill:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke:#0000dc;stroke-opacity:1"
          cy="92.67244"
          cx="36.348656"
          id="path47-5-6-9" />

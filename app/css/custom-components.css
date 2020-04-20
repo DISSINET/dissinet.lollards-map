@@ -50,7 +50,7 @@ button.success {
   .circle-main {
     fill: config("colors.muni");
     stroke: config("colors.white");
-    stroke-width: 3;
+    stroke-width: 2.5;
   }
 }
 
