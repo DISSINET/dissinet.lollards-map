@@ -16,7 +16,7 @@
     "deploy": "rsync -avz dist/ hde@hde.geogr.muni.cz:~/lollards --delete",
     "deploy-dissinet": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/lollards/ --delete --rsync-path=\"sudo rsync\"",
     "build-deploy": "npm run build && npm run deploy",
-    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css",
+    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css"
   },
   "repository": {
     "type": "git",
@@ -24,34 +24,30 @@
   },
   "keywords": [],
   "dependencies": {
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
-    "@types/node": "^12.12.36",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "d3": "^5.15.1",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
     "mobx": "^5.15.4",
     "mobx-react": "^5.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.6.3",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "postcss-custom-properties": "^8.0.11",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-leaflet": "^2.6.3",
-    "tailwindcss": "^0.7.4",
-    "typescript": "^3.8.3"
-  },
-  "devDependencies": {
-    "@types/jest-environment-puppeteer": "^4.3.1",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
     "google-spreadsheet": "^2.0.9",
-    "turf": "^3.0.14"
+    "turf": "^3.0.14",
+    "tailwindcss": "^0.7.4"
   }
 }
