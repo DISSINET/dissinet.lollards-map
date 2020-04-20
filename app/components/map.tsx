@@ -137,90 +137,68 @@ export default class MapComponent extends React.Component<Props> {
       .attr("transform", "translate(25 35)");
       */
 
-    if (markers.length > 1) {
-      const r = 16;
-      gSymbols
-        .append("circle")
-        .attr("class", "total")
-        .style("stroke", "white")
-        .style("stroke-width", "2")
-        .attr("x", svgSizeX / 2)
-        .attr("y", svgSizeY / 2)
-        .attr("r", r);
-      /*
-        gText
-        .append("text")
-        .text(markers.length)
-        .attr("class", "total")
-        .attr("font-size", "17")
-        .attr("transform", "translate(-1 5)");
-        */
-    } else {
-      const r = 10;
-      gSymbols
-        .append("circle")
-        .style("stroke", "white")
-        .style("stroke-width", "2")
-        .attr("class", "total")
-        .attr("x", svgSizeX / 2)
-        .attr("y", svgSizeY / 2)
-        .attr("r", r);
-    }
+    const r = markers.length > 1 ? 16 : 10;
+
+    gSymbols
+      .append("circle")
+      .attr("class", "circle circle-main")
+      .attr("x", svgSizeX / 2)
+      .attr("y", svgSizeY / 2)
+      .attr("r", r);
 
     const revoltY = -12;
     if (revolt1No) {
       gSymbols
         .append("circle")
-        .attr("class", "total")
+        .attr("class", "circle circle-revolt revolt-1")
         .attr("x", svgSizeX / 2)
-        .style("fill", "white")
         .attr("y", svgSizeY / 2)
-        .attr("transform", "translate(-8 " + revoltY + ")")
+        .attr("transform", "translate(-7 " + revoltY + ")")
         .attr("r", 8);
       gSymbols
         .append("path")
-        .attr("class", "revolt1")
+        .attr("class", "path path-revolt revolt-1")
         .attr("d", dFire)
         .attr(
           "transform",
-          "scale(0.5 0.5) translate(-28 " + (revoltY - 296) + ")"
+          "scale(0.40 0.40) translate(-30 " + (revoltY - 300) + ")"
         );
     }
 
     if (revolt2No) {
       gSymbols
         .append("circle")
-        .attr("class", "total")
+        .attr("class", "circle circle-revolt revolt-2")
         .attr("x", svgSizeX / 2)
-        .style("fill", "white")
         .attr("y", svgSizeY / 2)
         .attr("transform", "translate(8 " + revoltY + ")")
         .attr("r", 8);
       gSymbols
         .append("path")
         .attr("d", dFire)
-        .attr("class", "revolt2")
+        .attr("class", "path path-revolt revolt-2")
         .attr(
           "transform",
-          "scale(0.5 0.5) translate(5 " + (revoltY - 296) + ")"
+          "scale(0.40 0.40) translate(7 " + (revoltY - 300) + ")"
         );
     }
 
     if (booksNo) {
       gSymbols
         .append("circle")
-        .attr("class", "total")
+        .attr("class", "circle circle-book book")
         .attr("x", svgSizeX / 2)
-        .style("fill", "white")
         .attr("y", svgSizeY / 2)
         .attr("transform", "translate(8 10)")
         .attr("r", 10);
 
-      gSymbols.append(() => {
-        var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-        g.innerHTML = dBook;
-        return g;
-      });
+      gSymbols
+        .append(() => {
+          var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+          g.innerHTML = dBook;
+          return g;
+        })
+        .attr("class", "path path-book book");
     }
 
     return L.divIcon({

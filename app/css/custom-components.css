@@ -36,19 +36,18 @@ button.success {
 
 .cluster {
   .cluster-symbols > * {
-    stroke: config("colors.white");
-    stroke-width: 0.8;
+    stroke: config("colors.muni");
+    stroke-width: 1.5;
     stroke-opacity: 1;
     stroke-linecap: butt;
     stroke-linejoin: round;
     stroke-miterlimit: 4;
   }
-  .cluster-texts > * {
-    font-weight: medium;
+
+  .circle {
     fill: config("colors.white");
   }
-
-  circle.total {
+  .circle-main {
     fill: config("colors.muni");
   }
 }
