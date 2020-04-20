@@ -5,7 +5,7 @@ import * as ReactDOM from "react-dom";
 import App from "./components/app";
 import Store from "./store";
 
-import data from "./../data/data";
+import data from "./../data/data.json";
 console.log(data);
 
 window["store"] = new Store(data);

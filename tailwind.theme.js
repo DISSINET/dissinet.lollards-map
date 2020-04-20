@@ -2,10 +2,10 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 
 let theme = {
   transparent: "transparent",
-  muni: "#5000dc",
+  muni: "#0000dcff",
   secondary: "#dcdc00",
   danger: "#dc0000",
-  success: "#00dc00"
+  success: "#00dc00",
 };
 
 const colors = Object.assign({}, theme, defaultConfig.colors);
@@ -13,5 +13,5 @@ const colors = Object.assign({}, theme, defaultConfig.colors);
 module.exports = {
   colors: colors,
   textColors: colors,
-  backgroundColors: colors
+  backgroundColors: colors,
 };

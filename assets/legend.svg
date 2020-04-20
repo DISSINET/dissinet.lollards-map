@@ -17,7 +17,7 @@
    inkscape:export-filename="/home/adam/projects/dissinet.lollards_map/assets/legend.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
-   inkscape:version="0.92.4 (33fec40, 2019-01-16)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="legend.svg">
   <defs
      id="defs2">
@@ -129,17 +129,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="403.88832"
+     inkscape:cx="351.56242"
      inkscape:cy="373.22867"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="false"
      inkscape:snap-text-baseline="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="2560"
+     inkscape:window-height="1410"
      inkscape:window-x="0"
-     inkscape:window-y="34"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -183,7 +183,7 @@
      style="display:inline"
      transform="translate(0,-87)">
     <circle
-       style="fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#0000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795"
        cx="67.557549"
        cy="209.40984"
@@ -282,7 +282,7 @@
       </g>
     </g>
     <ellipse
-       style="fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.0116508;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#0000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.0116508;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795-2"
        cx="249.42848"
        cy="247.71906"
@@ -350,7 +350,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <circle
-       style="display:inline;fill:#5000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.83413911;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#0000dc;fill-opacity:1;stroke:#fcffff;stroke-width:2.83413911;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path3795-1"
        cx="249.42848"
        cy="213.89696"

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { propTypes } from "mobx-react";
 
 import Hero from "./hero";
 
@@ -41,7 +40,7 @@ export default class WelcomeComponent extends React.Component<Props> {
     const dateOptions = {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
     };
     const now = new Date();
 
@@ -190,8 +189,11 @@ export default class WelcomeComponent extends React.Component<Props> {
               unauthorized book owners, and participants in revolts related to
               Lollardy based on their trials (v. {window["version"]}). Dissident
               Networks Project (DISSINET). Retrieved{" "}
-              {now.toLocaleDateString("en-US", dateOptions)}, from
-              https://dissinet.cz/publications/maps/lollards.
+              {now.toLocaleDateString("en-US", dateOptions)}, from{" "}
+              <a href="https://dissinet.cz/maps/lollards">
+                https://dissinet.cz/maps/lollards
+              </a>
+              .
             </p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">

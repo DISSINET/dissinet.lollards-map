@@ -8,7 +8,7 @@ import {
   TileLayer,
   LayersControl,
   LayerGroup,
-  ScaleControl
+  ScaleControl,
 } from "react-leaflet";
 
 import "leaflet.markercluster";
@@ -50,7 +50,7 @@ export default class MapComponent extends React.Component<Props> {
         removeOutsideVisibleBounds: true,
         iconCreateFunction: this.clusterMarkerIcon.bind(this),
         animate: false,
-        singleMarkerMode: true
+        singleMarkerMode: true,
       });
       this.clusters.addTo(this.mapEl);
       this.loadClusters();
@@ -73,7 +73,7 @@ export default class MapComponent extends React.Component<Props> {
         fillOpacity: 1,
         weight: 0,
         radius: 10,
-        data: feature.properties
+        data: feature.properties,
       }).bindPopup(
         "<div>[<i>" +
           feature.properties.id +
@@ -90,11 +90,11 @@ export default class MapComponent extends React.Component<Props> {
     const markers = cluster.getAllChildMarkers();
     const single = markers.length === 1;
 
-    const revolt1No = markers.filter(m => m.options.data.revolt1414 === "1")
+    const revolt1No = markers.filter((m) => m.options.data.revolt1414 === "1")
       .length;
-    const revolt2No = markers.filter(m => m.options.data.revolt1431 === "1")
+    const revolt2No = markers.filter((m) => m.options.data.revolt1431 === "1")
       .length;
-    const booksNo = markers.filter(m => m.options.data.books === "1").length;
+    const booksNo = markers.filter((m) => m.options.data.books === "1").length;
 
     const svgEl = document.createElement("svg");
     svgEl.setAttribute("id", "marker " + cluster._leaflet_id);
@@ -119,8 +119,6 @@ export default class MapComponent extends React.Component<Props> {
       .attr("width", svgSizeX)
       .attr("height", svgSizeY);
 
-    const strokeWidth = 0.7;
-
     const gSymbols = svg
       .append("g")
       .style("stroke", "black")
@@ -130,12 +128,14 @@ export default class MapComponent extends React.Component<Props> {
         "translate(" + svgSizeX / 2 + " " + svgSizeY / 2 + ") "
       );
 
+    /*
     const gText = svg
       .append("g")
       .attr("class", "cluster-texts")
       .attr("font-size", "10")
       .style("text-anchor", "middle")
       .attr("transform", "translate(25 35)");
+      */
 
     if (markers.length > 1) {
       const r = 16;
@@ -226,7 +226,7 @@ export default class MapComponent extends React.Component<Props> {
     return L.divIcon({
       html: svgEl.outerHTML,
       className: "marker-icon " + (single ? "marker-single" : "marker-cluster"),
-      iconSize: L.point(radius * 2, radius * 2)
+      iconSize: L.point(radius * 2, radius * 2),
     });
   }
 
@@ -240,7 +240,7 @@ export default class MapComponent extends React.Component<Props> {
     L.icon({
       iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
       iconSize: [25, 40],
-      iconAnchor: [12, 40]
+      iconAnchor: [12, 40],
     });
 
     return (

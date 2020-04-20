@@ -16,7 +16,7 @@
     "deploy": "rsync -avz dist/ hde@hde.geogr.muni.cz:~/lollards --delete",
     "deploy-dissinet": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/lollards/ --delete --rsync-path=\"sudo rsync\"",
     "build-deploy": "npm run build && npm run deploy",
-    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css"
+    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.theme.js -o ./build/styles.css"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "@babel/preset-typescript": "^7.9.0",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "@types/node": "^13.13.0",
     "postcss-custom-properties": "^8.0.11",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
