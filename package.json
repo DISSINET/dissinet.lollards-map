@@ -11,10 +11,9 @@
   "main": "index.js",
   "scripts": {
     "clean-dist": "rm -f -r -d dist",
-    "start": "parcel app/index.html --open --no-cache",
-    "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
-    "deploy": "rsync -avz dist/ hde@hde.geogr.muni.cz:~/lollards --delete",
-    "deploy-dissinet": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/lollards/ --delete --rsync-path=\"sudo rsync\"",
+    "start": "parcel app/index.html --open",
+    "build": "npm run clean-dist && parcel build app/index.html --public-url ./",
+    "deploy": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/lollards/ --delete",
     "build-deploy": "npm run build && npm run deploy",
     "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.theme.js -o ./build/styles.css"
   },
@@ -40,15 +39,16 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
+    "@types/node": "^13.13.0",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
-    "@types/node": "^13.13.0",
+    "cssnano": "^4.1.10",
+    "google-spreadsheet": "^2.0.9",
     "postcss-custom-properties": "^8.0.11",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "google-spreadsheet": "^2.0.9",
-    "turf": "^3.0.14",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^0.7.4",
+    "turf": "^3.0.14"
   }
 }
