@@ -1,54 +1,54 @@
 {
-  "name": "dissinet.lollards_map",
-  "version": "1.2.0",
-  "description": "DISSINET <dissinet.cz> Lollards map",
-  "author": "Adam Mertel <mertel.adam@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/adammertel/dissinet.lollards_map/issues"
-  },
-  "homepage": "https://github.com/adammertel/dissinet.lollards_map#readme",
-  "main": "index.js",
-  "scripts": {
-    "clean-dist": "rm -f -r -d dist",
-    "start": "parcel app/index.html --open",
-    "build": "npm run clean-dist && parcel build app/index.html --public-url ./",
-    "deploy": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/lollards/ --delete",
-    "build-deploy": "npm run build && npm run deploy",
-    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.theme.js -o ./build/styles.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adammertel/boilerplate_map.git"
-  },
-  "keywords": [],
-  "dependencies": {
-    "d3": "^6.5.0",
-    "leaflet": "^1.6.0",
-    "leaflet.markercluster": "^1.4.1",
-    "mobx": "^5.15.4",
-    "mobx-react": "^5.4.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-leaflet": "^2.6.3",
-    "typescript": "^3.8.3"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
-    "@types/node": "^13.13.0",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "cssnano": "^4.1.10",
-    "google-spreadsheet": "^3.1.15",
-    "postcss-custom-properties": "^8.0.11",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.1",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^0.7.4",
-    "turf": "^3.0.14"
-  }
+    "name": "dissinet.lollards_map",
+    "version": "1.2.0",
+    "description": "DISSINET <dissinet.cz> Lollards map",
+    "author": "Adam Mertel <mertel.adam@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/adammertel/dissinet.lollards_map/issues"
+    },
+    "homepage": "https://github.com/adammertel/dissinet.lollards_map#readme",
+    "main": "index.js",
+    "scripts": {
+        "clean-dist": "rm -f -r -d dist",
+        "start": "parcel app/index.html --open",
+        "build": "npm run clean-dist && parcel build app/index.html --public-url ./",
+        "deploy": "rsync -avz dist/ adamm@10.16.30.211:~/../../var/www/html/maps/lollards/ --delete",
+        "build-deploy": "npm run build && npm run deploy",
+        "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.theme.js -o ./build/styles.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adammertel/boilerplate_map.git"
+    },
+    "keywords": [],
+    "dependencies": {
+        "d3": "^6.5.0",
+        "leaflet": "^1.6.0",
+        "leaflet.markercluster": "^1.4.1",
+        "mobx": "^5.15.4",
+        "mobx-react": "^5.4.4",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-leaflet": "^2.6.3",
+        "typescript": "^3.8.3"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.5",
+        "@babel/preset-react": "^7.9.4",
+        "@babel/preset-typescript": "^7.9.0",
+        "@types/node": "^13.13.0",
+        "@types/react": "^16.9.34",
+        "@types/react-dom": "^16.9.6",
+        "cssnano": "^4.1.10",
+        "google-spreadsheet": "^3.1.15",
+        "postcss-custom-properties": "^8.0.11",
+        "postcss-import": "^12.0.1",
+        "postcss-nested": "^4.2.1",
+        "postcss-preset-env": "^6.7.0",
+        "tailwindcss": "^0.7.4",
+        "turf": "^3.0.14"
+    }
 }
