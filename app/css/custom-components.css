@@ -56,8 +56,11 @@ button.success {
 
 .app-wrapper {
   .hero {
-    background-position-x: -1px;
-    background-repeat: round;
+    background-repeat: no-repeat;
+    font-family: "Muni", Arial, Helvetica Neue, sans-serif;
+    background-size: cover;
+    background-color: rgba(0, 0, 220, 1);
+    background-position-x: right;
 
     @font-face {
       font-family: "Muni";

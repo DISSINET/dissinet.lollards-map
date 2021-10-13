@@ -51,7 +51,7 @@ export default class PanelComponent extends React.Component<Props> {
   }
 
   render() {
-    console.log(this.props.filters);
+    //console.log(this.props.filters);
     return (
       <div className="panel" data-testid="panel-wrapper">
         <Hero />
@@ -60,14 +60,14 @@ export default class PanelComponent extends React.Component<Props> {
           <b>revolts</b>
           <ul>
             {this.props.filters
-              .filter(f => f.category === "revolts")
-              .map(revoltFilter => {
+              .filter((f) => f.category === "revolts")
+              .map((revoltFilter) => {
                 return this.renderCheckbox({
                   key: revoltFilter.id,
                   value: revoltFilter.id,
                   label: revoltFilter.label,
                   checked: revoltFilter.active,
-                  event: this.toggleCheckbox
+                  event: this.toggleCheckbox,
                 });
               })}
           </ul>
@@ -76,14 +76,14 @@ export default class PanelComponent extends React.Component<Props> {
           <b>books</b>
           <ul>
             {this.props.filters
-              .filter(f => f.category === "books")
-              .map(bookFilter => {
+              .filter((f) => f.category === "books")
+              .map((bookFilter) => {
                 return this.renderCheckbox({
                   key: bookFilter.id,
                   value: bookFilter.id,
                   label: bookFilter.label,
                   checked: bookFilter.active,
-                  event: this.toggleCheckbox
+                  event: this.toggleCheckbox,
                 });
               })}
           </ul>
