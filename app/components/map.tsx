@@ -234,30 +234,13 @@ export default class MapComponent extends React.Component<Props> {
           onViewportChanged={this.handleMapMove.bind(this)}
         >
           <ScaleControl />
-          {this.props.zoom < 11 ? (
-            <LayerGroup className="awmc">
-              <TileLayer
-                maxNativeZoom={15}
-                attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}"
-                subdomains="abcd"
-                ext="png"
-              />
-              <TileLayer
-                attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}{r}.{ext}"
-                subdomains="abcd"
-                ext="png"
-              />
-            </LayerGroup>
-          ) : (
-            <LayerGroup className="osm">
-              <TileLayer
-                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                url="https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
-              />
-            </LayerGroup>
-          )}
+
+          <LayerGroup className="osm">
+            <TileLayer
+              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+              url="https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+            />
+          </LayerGroup>
         </Map>
       </div>
     );
