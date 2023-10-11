@@ -36,7 +36,7 @@ button.success {
 
 .cluster {
   .cluster-symbols > * {
-    stroke: config("colors.muni");
+    @apply stroke-muni;
     stroke-width: 1.5;
     stroke-opacity: 1;
     stroke-linecap: butt;
@@ -45,11 +45,11 @@ button.success {
   }
 
   .circle {
-    fill: config("colors.white");
+    @apply fill-white;
   }
   .circle-main {
-    fill: config("colors.muni");
-    stroke: config("colors.white");
+    @apply fill-muni;
+    @apply stroke-white;
     stroke-width: 2.5;
   }
 }
@@ -62,19 +62,13 @@ button.success {
     background-color: rgba(0, 0, 220, 1);
     background-position-x: right;
 
-    @font-face {
-      font-family: "Muni";
-      src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
-        url("./../../assets/muni-bold-webfont.woff") format("woff");
-    }
     font-family: "Muni", Arial, Helvetica Neue, sans-serif;
   }
 
   font-family: Arial, Helvetica Neue, sans-serif;
   @apply absolute;
-  @apply pin-y;
-  @apply pin-r;
-  @apply pin-l;
+  @apply inset-y-0;
+  @apply inset-x-0;
 
   ul {
     @apply mb-4;
@@ -91,9 +85,15 @@ button.success {
   .welcome {
     @apply z-20;
     @apply absolute;
-    @apply pin-y;
-    @apply pin-r;
-    @apply pin-l;
+    @apply inset-y-0;
+    @apply inset-x-0;
+
+    a {
+      @apply text-muni;
+      @apply font-medium;
+      @apply underline;
+    }
+
     .background {
       @apply z-10;
       @apply w-full;
@@ -125,8 +125,10 @@ button.success {
     margin-bottom: 0.5rem;
   }
   .subheading {
-    font-size: 0.95rem;
-    margin-top: -0.5rem;
+    margin-top: 0px;
+    line-height: 1rem;
+    padding-left: 3px;
+    margin-right: 7px;
   }
 
   .panel {
@@ -134,8 +136,8 @@ button.success {
     @apply absolute;
     @apply bg-white;
     @apply z-10;
-    @apply pin-y;
-    @apply pin-r;
+    @apply inset-y-0;
+    @apply right-0;
     max-height: 100%;
 
     .legend {
@@ -162,8 +164,8 @@ button.success {
   .map {
     @apply z-0;
     @apply absolute;
-    @apply pin-y;
-    @apply pin-l;
+    @apply inset-y-0;
+    @apply left-0;
     .leaflet-container {
       @apply w-full;
       @apply h-full;
@@ -192,5 +194,4 @@ button.success {
   position: fixed;
   top: 0px;
   z-index: 20;
-  right: 0;
 }

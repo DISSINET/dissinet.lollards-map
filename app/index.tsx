@@ -6,10 +6,11 @@ import App from "./components/app";
 import Store from "./store";
 
 import data from "./../data/data.json";
-console.log(data);
+
+const { version } = require('./../package.json');
 
 window["store"] = new Store(data);
-window["version"] = process.env.npm_package_version;
+window["version"] = version;
 
 ReactDOM.render(
   React.createElement(App, { store: window["store"] }),

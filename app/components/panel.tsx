@@ -1,5 +1,4 @@
 import * as React from "react";
-import { propTypes } from "mobx-react";
 import Hero from "./hero";
 
 type Props = {};
@@ -20,11 +19,13 @@ export default class PanelComponent extends React.Component<Props> {
   }
 
   renderCheckbox(data: { key; value; label; checked; event; style? }) {
+    const checked = data.checked
+
     return (
       <li key={data.key} className="md:items-center ">
         <label className="block text-gray-500 font-bold">
           <span>
-            {data.checked ? (
+            {checked ? (
               <i
                 id={data.key}
                 onClick={data.event.bind(this)}
@@ -41,7 +42,7 @@ export default class PanelComponent extends React.Component<Props> {
           <span
             id={data.key}
             onClick={data.event.bind(this)}
-            className="text-sm align-text-top tb-2  font-normal"
+            className={`text-sm align-text-top tb-2  font-medium ${checked ? "underline" : ""} ${checked ? "text-black" : "text-slate-700"}`}
           >
             {data.label}
           </span>
@@ -97,7 +98,7 @@ export default class PanelComponent extends React.Component<Props> {
 
           <div className="align-middle buttons ">
             <button
-              className="text-base primary"
+              className="text-white primary"
               onClick={this.handleOpenWelcome.bind(this)}
             >
               <i className="mr-2 icon icon-info" />
@@ -107,7 +108,7 @@ export default class PanelComponent extends React.Component<Props> {
               href="https://docs.google.com/spreadsheets/d/1SUUjjtBT7HBOS9V6USNPk4eR5SFSsSrDByRxrERgg7A"
               target="_blank"
             >
-              <button className="text-base primary">
+              <button className="text-white">
                 <i className="mr-2 icon icon-database" />
                 dataset
               </button>

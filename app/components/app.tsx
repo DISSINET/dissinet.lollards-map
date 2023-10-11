@@ -23,7 +23,7 @@ export default class App extends React.Component<Props> {
       <div className={store.panel ? "panel-on" : "panel-off"}>
         {store.panel ? (
           <button
-            className="m-0 panel-hider on text-base muni bg-black"
+            className="m-0 panel-hider on text-base muni bg-muni right-96"
             onClick={this.handleTogglePanel.bind(this)}
             title="toggle panel"
           >
@@ -31,7 +31,7 @@ export default class App extends React.Component<Props> {
           </button>
         ) : (
           <button
-            className=" m-0 panel-hider off text-base muni bg-black"
+            className=" m-0 panel-hider off text-base muni bg-muni right-0"
             onClick={this.handleTogglePanel.bind(this)}
             title="toggle panel"
           >
@@ -51,9 +51,9 @@ export default class App extends React.Component<Props> {
               activateFilter={store.activateFilter.bind(store)}
               openWelcome={store.openWelcome.bind(store)}
             />
-            <div className="panel-footer absolute pin-r pin-b  w-100 bg-grey m-0 z-20">
+            <div className="panel-footer absolute right-0 bottom-0 w-100 bg-slate-300 m-0 z-20">
               <div className="text-right">
-                <a target="_blank" href="https://dissinet.cz">
+                <a target="_blank" href="https://dissinet.cz" className="float-right">
                   <svg
                     className="pin-r"
                     width="178"

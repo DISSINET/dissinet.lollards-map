@@ -1,7 +1,4 @@
 import * as React from "react";
-import { propTypes } from "mobx-react";
-
-import Hero from "./hero";
 
 type Props = {};
 
@@ -20,7 +17,7 @@ export default class WelcomeComponent extends React.Component<Props> {
   render() {
     return (
       <div
-        className="hero font-bold text-xl pt-12 pb-4 px-4 text-white bg-cover"
+        className="hero font-bold text-xl pt-8 pb-4 px-4 text-white bg-cover"
         data-testid="welcome-wrapper"
         style={{
           background: " cover",
@@ -30,10 +27,12 @@ export default class WelcomeComponent extends React.Component<Props> {
         }}
       >
         <h2 className="heading text-white font-bold">Lollards, 1414–1522</h2>
-        <h4 className="subheading text-white font-medium">
+        <h4 className="text-sm  text-white font-medium ">
           Places of origin of Lollards, unauthorized book owners, and
-          participants in revolts related to Lollardy based on their trials (v.{" "}
-          {window["version"]})
+          participants in revolts related to Lollardy based on their trials 
+        </h4>
+        <h4 className="text-slate-300 font-normal pt-2 text-xs" >
+          (v.{window["version"]})
         </h4>
       </div>
     );

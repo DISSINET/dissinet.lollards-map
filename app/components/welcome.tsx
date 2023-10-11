@@ -49,7 +49,7 @@ export default class WelcomeComponent extends React.Component<Props> {
         <div className="content ">
           <Hero />
           <button
-            className="text-base text-black text-2xl absolute pin-t pin-r bg-transparent"
+            className="text-base text-black text-2xl absolute top-0 right-0 bg-transparent hover:bg-muni hover:text-white"
             onClick={this.handleClose.bind(this)}
           >
             x
@@ -196,7 +196,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               .
             </p>
           </div>
-          <div className="footer w-100 bg-grey p-4 table-row">
+          <div className="footer w-100 bg-slate-300 p-4 table-row">
             <div className="table-cell p-4 w-2/3 align-top paragraph small text-sm mr-32">
               <i>
                 The digitization of this map is a part of the{" "}
@@ -214,7 +214,7 @@ export default class WelcomeComponent extends React.Component<Props> {
                 this financial support.
               </i>
             </div>
-            <div className="table-cell align-bottom text-right">
+            <div className="table-cell align-middle text-right">
               <a className="" target="_blank" href="https://dissinet.cz">
                 <svg
                   className=""

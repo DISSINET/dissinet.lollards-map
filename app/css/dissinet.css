@@ -1,25 +1,5 @@
 /* DISSINET STYLES */
 
-@font-face {
-  font-family: "Muni";
-  src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
-    url("./../../assets/muni-bold-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Font Awesome Pro";
-  font-style: normal;
-  font-weight: 300;
-  src: url("./../../assets/fa-light-300.woff2") format("woff2"),
-    url("./../../assets/fa-light-300.woff") format("woff");
-}
-@font-face {
-  font-family: "Font Awesome Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./../../assets/fa-brands-400.woff2") format("woff2"),
-    url("./../../assets/fa-brands-400.woff") format("woff");
-}
 .icon,
 .fas,
 .far,
@@ -36,126 +16,10 @@
   text-rendering: auto;
   line-height: 1;
   text-decoration: none;
+  font: normal 16px/1.45 Arial, Helvetica Neue, sans-serif;
 }
 
-font: normal 16px/1.45 Arial, Helvetica Neue, sans-serif;
-div.line {
-  &.empty {
-    margin-bottom: 2rem;
-  }
-  &.solid {
-    border-bottom: 2px solid black;
-  }
-  &.dotted {
-    border-bottom: 2px dotted black;
-  }
-}
 
-div.newline {
-}
-p {
-  margin-bottom: 0.3rem;
-  &.indent {
-    text-indent: 2rem;
-  }
-  &.spaced {
-    margin-bottom: 1rem;
-  }
-}
-
-.heading,
-.subheading {
-  font-family: "Muni", Arial, Helvetica Neue, sans-serif;
-}
-
-.heading {
-  font-size: 3rem;
-}
-.subheading {
-  font-size: 2rem;
-  margin-top: -0.5rem;
-}
-
-button {
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  @apply bg-muni;
-  &.icon-before .icon {
-    padding-right: 0.5rem;
-  }
-  &.icon-after .icon {
-    padding-left: 0.5rem;
-  }
-  &.primary {
-    @apply bg-muni;
-  }
-  &.secondary {
-    @apply bg-secondary;
-  }
-  &.danger {
-    @apply bg-danger;
-  }
-  &.success {
-    @apply bg-success;
-  }
-}
-button:hover {
-  @apply bg-black;
-}
-
-span {
-  &.text-italic {
-    font-style: italic;
-  }
-  &.text-primary {
-    @apply text-muni;
-  }
-  &.text-secondary {
-    @apply text-secondary;
-  }
-  &.text-danger {
-    @apply text-danger;
-  }
-  &.text-success {
-    @apply text-success;
-  }
-  &.text-bold {
-    font-weight: bold;
-  }
-  &.text-strikethrough {
-    text-decoration: line-through;
-  }
-  &.text-underline {
-    text-decoration: underline;
-  }
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  &.bullets {
-    list-style: inside;
-  }
-  li {
-  }
-}
-
-@font-face {
-  font-family: "Font Awesome Pro";
-  font-style: normal;
-  font-weight: 300;
-  src: url("./../../assets/fa-light-300.woff2") format("woff2"),
-    url("./../../assets/fa-light-300.woff") format("woff");
-}
-@font-face {
-  font-family: "Font Awesome Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./../../assets/fa-brands-400.woff2") format("woff2"),
-    url("./../../assets/fa-brands-400.woff") format("woff");
-}
 .icon,
 .fas,
 .far,
