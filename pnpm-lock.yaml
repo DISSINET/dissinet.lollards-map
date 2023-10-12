@@ -5,8 +5,11 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@swc/helpers':
+    specifier: ^0.5.3
+    version: 0.5.3
   d3:
-    specifier: ^6.5.0
+    specifier: ^6.7.0
     version: 6.7.0
   leaflet:
     specifier: ^1.6.0
@@ -57,7 +60,7 @@ devDependencies:
     version: 3.3.0
   parcel:
     specifier: ^2.10.0
-    version: 2.10.0(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10)
+    version: 2.10.0(@swc/helpers@0.5.3)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10)
   postcss:
     specifier: ^8.4.31
     version: 8.4.31
@@ -690,7 +693,7 @@ packages:
       - '@parcel/core'
     dev: true
 
-  /@parcel/config-default@2.10.0(@parcel/core@2.10.0)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10):
+  /@parcel/config-default@2.10.0(@parcel/core@2.10.0)(@swc/helpers@0.5.3)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10):
     resolution: {integrity: sha512-7Ucd+KNEC08To2NrduC/yIHBN5ayedBoiuI5OVrDeKvyqUnI1S1HRqPF3DsrM8pC2PIdnwJgoOviRXwJemW28A==}
     peerDependencies:
       '@parcel/core': ^2.10.0
@@ -703,7 +706,7 @@ packages:
       '@parcel/optimizer-htmlnano': 2.10.0(@parcel/core@2.10.0)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10)
       '@parcel/optimizer-image': 2.10.0(@parcel/core@2.10.0)
       '@parcel/optimizer-svgo': 2.10.0(@parcel/core@2.10.0)
-      '@parcel/optimizer-swc': 2.10.0(@parcel/core@2.10.0)
+      '@parcel/optimizer-swc': 2.10.0(@parcel/core@2.10.0)(@swc/helpers@0.5.3)
       '@parcel/packager-css': 2.10.0(@parcel/core@2.10.0)
       '@parcel/packager-html': 2.10.0(@parcel/core@2.10.0)
       '@parcel/packager-js': 2.10.0(@parcel/core@2.10.0)
@@ -907,7 +910,7 @@ packages:
       - '@parcel/core'
     dev: true
 
-  /@parcel/optimizer-swc@2.10.0(@parcel/core@2.10.0):
+  /@parcel/optimizer-swc@2.10.0(@parcel/core@2.10.0)(@swc/helpers@0.5.3):
     resolution: {integrity: sha512-yq17TG6uyzIbiouK57AngJa6rVwfJ8hPzgc2lqZ9LJxDX07t/5Z+k/+aq4Izy+7kQNR8kH+4asWaMXReSsXmNQ==}
     engines: {node: '>= 12.0.0', parcel: ^2.10.0}
     dependencies:
@@ -915,7 +918,7 @@ packages:
       '@parcel/plugin': 2.10.0(@parcel/core@2.10.0)
       '@parcel/source-map': 2.1.1
       '@parcel/utils': 2.10.0
-      '@swc/core': 1.3.92
+      '@swc/core': 1.3.92(@swc/helpers@0.5.3)
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - '@parcel/core'
@@ -1553,7 +1556,7 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core@1.3.92:
+  /@swc/core@1.3.92(@swc/helpers@0.5.3):
     resolution: {integrity: sha512-vx0vUrf4YTEw59njOJ46Ha5i0cZTMYdRHQ7KXU29efN1MxcmJH2RajWLPlvQarOP1ab9iv9cApD7SMchDyx2vA==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -1564,6 +1567,7 @@ packages:
         optional: true
     dependencies:
       '@swc/counter': 0.1.2
+      '@swc/helpers': 0.5.3
       '@swc/types': 0.1.5
     optionalDependencies:
       '@swc/core-darwin-arm64': 1.3.92
@@ -1586,7 +1590,6 @@ packages:
     resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
     dependencies:
       tslib: 2.6.2
-    dev: true
 
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
@@ -3629,7 +3632,7 @@ packages:
     resolution: {integrity: sha512-9LtiGlPy982CsgxZvJGNNp2/NnrgEr6EAyN3iIEP3/8vd3YLgAZQHbQ75ZrkfBRGrNg37Dk3U6tuVb+B4Xfslg==}
     dev: true
 
-  /parcel@2.10.0(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10):
+  /parcel@2.10.0(@swc/helpers@0.5.3)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10):
     resolution: {integrity: sha512-YJmWEsiv1ClpPcJiWkr3gFj40sRvfeK89GGGwJjpzQMQsBmN6h6OHrSkByx0jrsPIvdsOIccU702upYpRAypuw==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
@@ -3637,7 +3640,7 @@ packages:
       '@parcel/core':
         optional: true
     dependencies:
-      '@parcel/config-default': 2.10.0(@parcel/core@2.10.0)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10)
+      '@parcel/config-default': 2.10.0(@parcel/core@2.10.0)(@swc/helpers@0.5.3)(cssnano@4.1.11)(postcss@8.4.31)(typescript@3.9.10)
       '@parcel/core': 2.10.0
       '@parcel/diagnostic': 2.10.0
       '@parcel/events': 2.10.0
@@ -4826,7 +4829,6 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-    dev: true
 
   /type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}

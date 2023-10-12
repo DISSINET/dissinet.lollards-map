@@ -1,15 +1,8 @@
-import React from "react";
-import L from "leaflet";
 import * as d3 from "d3";
+import L from "leaflet";
+import React from "react";
 
-import {
-  Map,
-  Marker,
-  TileLayer,
-  LayersControl,
-  LayerGroup,
-  ScaleControl,
-} from "react-leaflet";
+import { LayerGroup, Map, ScaleControl, TileLayer } from "react-leaflet";
 
 import "leaflet.markercluster";
 
@@ -32,6 +25,9 @@ export default class MapComponent extends React.Component<Props> {
 
   constructor(props) {
     super(props);
+
+    // parcel doesnt want to load d3 without this console.log
+    console.log(d3);
     this.mapRef = React.createRef();
     this.mapEl = false;
   }
@@ -130,14 +126,14 @@ export default class MapComponent extends React.Component<Props> {
         "translate(" + svgSizeX / 2 + " " + svgSizeY / 2 + ") "
       );
 
-    /*
-    const gText = svg
-      .append("g")
-      .attr("class", "cluster-texts")
-      .attr("font-size", "10")
-      .style("text-anchor", "middle")
-      .attr("transform", "translate(25 35)");
-      */
+    // /*
+    // const gText = svg
+    //   .append("g")
+    //   .attr("class", "cluster-texts")
+    //   .attr("font-size", "10")
+    //   .style("text-anchor", "middle")
+    //   .attr("transform", "translate(25 35)");
+    //   */
 
     const r = markers.length > 1 ? 16 : 10;
 

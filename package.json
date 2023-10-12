@@ -8,7 +8,7 @@
     "url": "https://github.com/adammertel/dissinet.lollards_map/issues"
   },
   "homepage": "https://github.com/adammertel/dissinet.lollards_map#readme",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
     "clean-dist": "rm -f -r -d dist",
     "start": "parcel app/index.html --open",
@@ -23,7 +23,8 @@
   },
   "keywords": [],
   "dependencies": {
-    "d3": "^6.5.0",
+    "@swc/helpers": "^0.5.3",
+    "d3": "^6.7.0",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
     "mobx": "^5.15.4",
